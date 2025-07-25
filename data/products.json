@@ -1,0 +1,1181 @@
+[
+  {
+    "id": "1",
+    "name": "Samsung Galaxy S23 Ultra 5G",
+    "price": 4299,
+    "originalPrice": 4999,
+    "discount": 14,
+    "image": "/iphone2.avif",
+    "images": ["/iphone.avif", "/iphone2.avif"],
+    "category": "Smartphones",
+    "rating": 4.8,
+    "reviews": 342,
+    "description": "200MP camera with S Pen, 5000mAh battery, 12GB RAM 256GB storage",
+    "inStock": true,
+    "featured": true,
+    "slug": "samsung-galaxy-s23-ultra-5g",
+    "colors": [
+      {
+        "name": "Phantom Black",
+        "images": ["/iphone2.avif"]
+      },
+      {
+        "name": "Cotton Flower",
+        "images": ["/iphone.avif"]
+      }
+    ],
+    "sizes": ["256GB", "512GB", "1TB"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 4199,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Extra 5% off for noon VIP members",
+        "delivery": "Free shipping in 1 day",
+        "lastChecked": "2025-07-17T08:20:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 4299,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹2000 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 4399,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹8000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-17T09:15:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "6.8\" Dynamic AMOLED 2X" },
+      { "name": "Processor", "value": "Snapdragon 8 Gen 2" },
+      { "name": "RAM", "value": "12GB" },
+      { "name": "Storage", "value": "256GB" },
+      { "name": "Battery", "value": "5000mAh" },
+      { "name": "Camera", "value": "200MP + 12MP + 10MP" }
+    ],
+    "features": [
+      "200MP professional-grade camera",
+      "Built-in S Pen with 2.8ms latency",
+      "Nightography for stunning low-light photos",
+      "5000mAh all-day battery"
+    ],
+    "priceHistory": [
+      { "date": "2025-06-01", "price": 4499, "lowestPrice": 4399 },
+      { "date": "2025-06-15", "price": 4399, "lowestPrice": 4299 },
+      { "date": "2025-07-01", "price": 4299, "lowestPrice": 4199 }
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "2",
+    "name": "Apple MacBook Air M2",
+    "price": 5199,
+    "originalPrice": 5499,
+    "discount": 5,
+    "image": "/laptop.jpg",
+    "images": ["/laptop.jpg"],
+    "category": "Laptops",
+    "rating": 4.9,
+    "reviews": 278,
+    "description": "13.6\" Liquid Retina display, 8-core CPU, 8GB RAM 256GB SSD",
+    "inStock": true,
+    "featured": true,
+    "slug": "macbook-air-m2",
+    "colors": [
+      {
+        "name": "Space Gray",
+        "images": ["/laptop.jpg"]
+      },
+      {
+        "name": "Silver",
+        "images": ["/laptop.jpg"]
+      }
+    ],
+    "sizes": ["256GB", "512GB", "1TB"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 5099,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free AppleCare+ for 1 year",
+        "delivery": "Same day delivery available",
+        "lastChecked": "2025-07-17T11:10:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 5199,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "No Cost EMI available",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 5299,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Extra ₹500 off on Axis Bank Cards",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-16T14:20:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "13.6\" Liquid Retina" },
+      { "name": "Processor", "value": "Apple M2 chip" },
+      { "name": "Memory", "value": "8GB unified memory" },
+      { "name": "Storage", "value": "256GB SSD" },
+      { "name": "Battery", "value": "Up to 18 hours" },
+      { "name": "Weight", "value": "1.24 kg" }
+    ],
+    "features": [
+      "M2 chip with 8-core CPU and 10-core GPU",
+      "Liquid Retina display with True Tone",
+      "MagSafe charging port",
+      "Touch ID for secure authentication"
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "3",
+    "name": "Apple Watch Series 8",
+    "price": 1699,
+    "originalPrice": 1899,
+    "discount": 11,
+    "image": "/watch1.avif",
+    "images": ["/watch1.avif", "/watch2.avif", "/watch3.avif"],
+    "category": "Wearables",
+    "rating": 4.7,
+    "reviews": 412,
+    "description": "45mm, blood oxygen sensor, ECG, always-on Retina display",
+    "inStock": true,
+    "featured": true,
+    "slug": "apple-watch-8",
+    "colors": [
+      {
+        "name": "Midnight",
+        "images": ["/watch1.avif"]
+      },
+      {
+        "name": "Starlight",
+        "images": ["/watch2.avif"]
+      },
+      {
+        "name": "Silver",
+        "images": ["/watch3.avif"]
+      }
+    ],
+    "sizes": ["41mm", "45mm"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 1599,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free extra band with purchase",
+        "delivery": "Next day delivery",
+        "lastChecked": "2025-07-16T16:40:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 1699,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹2000 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 1799,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹8000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-17T08:45:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "Always-On Retina LTPO OLED" },
+      { "name": "Chip", "value": "Apple S8" },
+      { "name": "Sensors", "value": "Blood Oxygen, ECG, Temperature" },
+      { "name": "Water Resistance", "value": "50 meters" },
+      { "name": "Battery Life", "value": "Up to 18 hours" }
+    ],
+    "features": [
+      "Advanced health monitoring including temperature sensing",
+      "Crash Detection for emergencies",
+      "Always-On Retina display",
+      "Swimproof design"
+    ],
+    "priceHistory": [
+      { "date": "2025-05-01", "price": 1899, "lowestPrice": 1799 },
+      { "date": "2025-06-01", "price": 1799, "lowestPrice": 1699 },
+      { "date": "2025-07-01", "price": 1699, "lowestPrice": 1599 }
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "4",
+    "name": "Sony PlayStation 5 Digital Edition",
+    "price": 1799,
+    "originalPrice": 1999,
+    "discount": 10,
+    "image": "/ps5.jpg",
+    "images": ["/ps5.jpg"],
+    "category": "Gaming",
+    "rating": 4.9,
+    "reviews": 587,
+    "description": "825GB SSD, 4K UHD, 120Hz, DualSense controller",
+    "inStock": false,
+    "featured": true,
+    "slug": "ps5-digital",
+    "colors": [
+      {
+        "name": "White",
+        "images": ["/ps5.jpg"]
+      }
+    ],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 1749,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free game with purchase",
+        "delivery": "Pre-order available",
+        "lastChecked": "2025-07-17T09:25:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 1799,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹2000 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 1899,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹8000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-16T16:30:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Processor", "value": "AMD Zen 2, 8-core" },
+      { "name": "GPU", "value": "AMD RDNA 2, 10.3 TFLOPS" },
+      { "name": "Memory", "value": "16GB GDDR6" },
+      { "name": "Storage", "value": "825GB SSD" },
+      { "name": "Resolution", "value": "4K UHD at 120Hz" }
+    ],
+    "features": [
+      "Ultra-high speed SSD",
+      "Haptic feedback and adaptive triggers",
+      "3D AudioTech",
+      "4K UHD Blu-ray drive (in standard edition)"
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "5",
+    "name": "iPad Pro 12.9\"",
+    "price": 3899,
+    "originalPrice": 4299,
+    "discount": 9,
+    "image": "/tablet3.avif",
+    "images": ["/tablet1.avif", "/tablet2.avif", "/tablet3.avif"],
+    "category": "Tablets",
+    "rating": 4.8,
+    "reviews": 321,
+    "description": "M2 chip, Liquid Retina XDR display, 128GB storage",
+    "inStock": true,
+    "featured": true,
+    "slug": "ipad-pro-12-9",
+    "colors": [
+      {
+        "name": "Space Gray",
+        "images": ["/tablet1.avif"]
+      },
+      {
+        "name": "Silver",
+        "images": ["/tablet2.avif"]
+      },
+      {
+        "name": "Silver",
+        "images": ["/tablet3.avif"]
+      }
+    ],
+    "sizes": ["128GB", "256GB", "512GB", "1TB"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 3799,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free Apple Pencil with purchase",
+        "delivery": "Same day delivery available",
+        "lastChecked": "2025-07-16T18:15:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 3899,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹2000 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 3999,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹8000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-17T09:00:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "12.9\" Liquid Retina XDR" },
+      { "name": "Chip", "value": "Apple M2" },
+      { "name": "Storage", "value": "128GB" },
+      { "name": "Camera", "value": "12MP Wide + 10MP Ultra Wide" },
+      { "name": "Battery", "value": "Up to 10 hours" }
+    ],
+    "features": [
+      "M2 chip with 8-core CPU and 10-core GPU",
+      "Liquid Retina XDR display with ProMotion",
+      "Thunderbolt / USB 4 port",
+      "Face ID for secure authentication"
+    ],
+    "priceHistory": [
+      { "date": "2025-04-01", "price": 4299, "lowestPrice": 4199 },
+      { "date": "2025-05-15", "price": 4199, "lowestPrice": 3999 },
+      { "date": "2025-07-01", "price": 3899, "lowestPrice": 3799 }
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "6",
+    "name": "AirPods Pro (2nd Generation)",
+    "price": 1099,
+    "originalPrice": 1199,
+    "discount": 8,
+    "image": "/earpod2.avif",
+    "images": ["/earpod.avif", "/earpod2.avif", "/earpod3.avif"],
+    "category": "Audio",
+    "rating": 4.8,
+    "reviews": 498,
+    "description": "Active Noise Cancellation with Personalized Spatial Audio",
+    "inStock": true,
+    "featured": true,
+    "slug": "airpods-pro2",
+    "colors": [
+      {
+        "name": "White",
+        "images": ["/earpod.avif"]
+      },
+      {
+        "name": "White",
+        "images": ["/earpod2.avif"]
+      },
+      {
+        "name": "White",
+        "images": ["/earpod3.avif"]
+      }
+    ],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 1049,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Limited time discount",
+        "delivery": "Next day delivery",
+        "lastChecked": "2025-07-17T10:05:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 1099,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹2000 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 1149,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹8000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-16T17:45:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Driver", "value": "Custom high-excursion Apple driver" },
+      { "name": "Active Noise Cancellation", "value": "Yes" },
+      { "name": "Battery Life", "value": "Up to 6 hours (ANC on)" },
+      { "name": "Case Battery", "value": "Over 30 hours" },
+      { "name": "Water Resistance", "value": "IPX4" }
+    ],
+    "features": [
+      "Active Noise Cancellation",
+      "Adaptive Transparency mode",
+      "Personalized Spatial Audio",
+      "Touch control with swipe volume adjustment"
+    ],
+    "priceHistory": [
+      { "date": "2025-05-01", "price": 1199, "lowestPrice": 1149 },
+      { "date": "2025-06-01", "price": 1149, "lowestPrice": 1099 },
+      { "date": "2025-07-01", "price": 1099, "lowestPrice": 1049 }
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "7",
+    "name": "iPhone 15 Pro",
+    "price": 4499,
+    "originalPrice": 4999,
+    "discount": 10,
+    "image": "/iphone2.avif",
+    "images": ["/iphone2.avif", "/iphone.avif"],
+    "category": "Smartphones",
+    "rating": 4.8,
+    "reviews": 1247,
+    "description": "A17 Pro chip with 6-core GPU, 48MP Main camera",
+    "inStock": true,
+    "featured": true,
+    "slug": "iphone-15-pro",
+    "colors": [
+      {
+        "name": "Titanium Black",
+        "images": ["/earpod3.avif"]
+      },
+      {
+        "name": "Titanium White",
+        "images": ["/earpod3.avif"]
+      },
+      {
+        "name": "Titanium Blue",
+        "images": ["/earpod3.avif"]
+      },
+      {
+        "name": "Titanium Natural",
+        "images": ["/earpod3.avif"]
+      }
+    ],
+    "sizes": ["128GB", "256GB", "512GB", "1TB"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 4399,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free sport band with purchase",
+        "delivery": "Next day delivery",
+        "lastChecked": "2025-07-17T08:15:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 4499,
+        "url": "https://amazon.in/product",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹5000 off with HDFC Credit Card",
+        "delivery": "Free shipping in 1 day",
+        "lastChecked": "2025-07-17T11:00:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 4599,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹25000",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:45:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "6.1\" Super Retina XDR" },
+      { "name": "Chip", "value": "A17 Pro" },
+      {
+        "name": "Camera",
+        "value": "48MP Main + 12MP Ultra Wide + 12MP Telephoto"
+      },
+      { "name": "Battery", "value": "Up to 23 hours video playback" },
+      { "name": "Material", "value": "Titanium with textured matte glass back" }
+    ],
+    "features": [
+      "A17 Pro chip with 6-core GPU",
+      "48MP Main camera with 24mm focal length",
+      "Action button for quick access to features",
+      "USB-C charging"
+    ],
+    "priceHistory": [
+      { "date": "2025-05-01", "price": 4999, "lowestPrice": 4799 },
+      { "date": "2025-06-01", "price": 4799, "lowestPrice": 4599 },
+      { "date": "2025-07-01", "price": 4499, "lowestPrice": 4399 }
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "8",
+    "name": "Apple Watch SE (2nd Gen)",
+    "price": 1299,
+    "originalPrice": 1499,
+    "discount": 13,
+    "image": "/watch2.avif",
+    "images": ["/watch2.avif", "/watch1.avif"],
+    "category": "Wearables",
+    "rating": 4.6,
+    "reviews": 376,
+    "description": "40mm, Retina display, fitness tracking, water resistant",
+    "inStock": true,
+    "featured": false,
+    "slug": "apple-watch-se-2",
+    "colors": [
+      {
+        "name": "Midnight",
+        "images": ["/earpod3.avif"]
+      },
+      {
+        "name": "Starlight",
+        "images": ["/earpod3.avif"]
+      },
+      {
+        "name": "Silver",
+        "images": ["/earpod3.avif"]
+      }
+    ],
+    "sizes": ["40mm", "44mm"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 1249,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free sport band with purchase",
+        "delivery": "Next day delivery",
+        "lastChecked": "2025-07-17T08:15:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 1299,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹1500 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T09:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 1349,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹5000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-16T15:45:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "Retina LTPO OLED" },
+      { "name": "Chip", "value": "Apple S8" },
+      { "name": "Water Resistance", "value": "50 meters" },
+      { "name": "Battery Life", "value": "Up to 18 hours" },
+      {
+        "name": "Sensors",
+        "value": "Optical heart sensor, Accelerometer, Gyroscope"
+      }
+    ],
+    "features": [
+      "Retina display with Force Touch",
+      "Fitness tracking with Activity rings",
+      "Swimproof design",
+      "Emergency SOS and Fall Detection"
+    ],
+    "priceHistory": [
+      { "date": "2025-04-15", "price": 1499, "lowestPrice": 1399 },
+      { "date": "2025-06-01", "price": 1399, "lowestPrice": 1299 },
+      { "date": "2025-07-01", "price": 1299, "lowestPrice": 1249 }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Samsung Galaxy S23 Ultra 5G",
+    "price": 4299,
+    "originalPrice": 4999,
+    "discount": 14,
+    "image": "/iphone2.avif",
+    "images": ["/iphone.avif", "/iphone2.avif"],
+    "category": "Smartphones",
+    "rating": 4.8,
+    "reviews": 342,
+    "description": "200MP camera with S Pen, 5000mAh battery, 12GB RAM 256GB storage",
+    "inStock": true,
+    "featured": true,
+    "slug": "samsung-galaxy-s23-ultra-5g",
+    "colors": [
+      {
+        "name": "Phantom Black",
+        "images": ["/iphone2.avif"]
+      },
+      {
+        "name": "Cotton Flower",
+        "images": ["/iphone.avif"]
+      }
+    ],
+    "sizes": ["256GB", "512GB", "1TB"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 4199,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Extra 5% off for noon VIP members",
+        "delivery": "Free shipping in 1 day",
+        "lastChecked": "2025-07-17T08:20:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 4299,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹2000 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 4399,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹8000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-17T09:15:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "6.8\" Dynamic AMOLED 2X" },
+      { "name": "Processor", "value": "Snapdragon 8 Gen 2" },
+      { "name": "RAM", "value": "12GB" },
+      { "name": "Storage", "value": "256GB" },
+      { "name": "Battery", "value": "5000mAh" },
+      { "name": "Camera", "value": "200MP + 12MP + 10MP" }
+    ],
+    "features": [
+      "200MP professional-grade camera",
+      "Built-in S Pen with 2.8ms latency",
+      "Nightography for stunning low-light photos",
+      "5000mAh all-day battery"
+    ],
+    "priceHistory": [
+      { "date": "2025-06-01", "price": 4499, "lowestPrice": 4399 },
+      { "date": "2025-06-15", "price": 4399, "lowestPrice": 4299 },
+      { "date": "2025-07-01", "price": 4299, "lowestPrice": 4199 }
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "10",
+    "name": "Apple MacBook Air M2",
+    "price": 5199,
+    "originalPrice": 5499,
+    "discount": 5,
+    "image": "/laptop.jpg",
+    "images": ["/laptop.jpg"],
+    "category": "Laptops",
+    "rating": 4.9,
+    "reviews": 278,
+    "description": "13.6\" Liquid Retina display, 8-core CPU, 8GB RAM 256GB SSD",
+    "inStock": true,
+    "featured": true,
+    "slug": "macbook-air-m2",
+    "colors": [
+      {
+        "name": "Space Gray",
+        "images": ["/laptop.jpg"]
+      },
+      {
+        "name": "Silver",
+        "images": ["/laptop.jpg"]
+      }
+    ],
+    "sizes": ["256GB", "512GB", "1TB"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 5099,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free AppleCare+ for 1 year",
+        "delivery": "Same day delivery available",
+        "lastChecked": "2025-07-17T11:10:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 5199,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "No Cost EMI available",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 5299,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Extra ₹500 off on Axis Bank Cards",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-16T14:20:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "13.6\" Liquid Retina" },
+      { "name": "Processor", "value": "Apple M2 chip" },
+      { "name": "Memory", "value": "8GB unified memory" },
+      { "name": "Storage", "value": "256GB SSD" },
+      { "name": "Battery", "value": "Up to 18 hours" },
+      { "name": "Weight", "value": "1.24 kg" }
+    ],
+    "features": [
+      "M2 chip with 8-core CPU and 10-core GPU",
+      "Liquid Retina display with True Tone",
+      "MagSafe charging port",
+      "Touch ID for secure authentication"
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "11",
+    "name": "Apple Watch Series 8",
+    "price": 1699,
+    "originalPrice": 1899,
+    "discount": 11,
+    "image": "/watch1.avif",
+    "images": ["/watch1.avif", "/watch2.avif", "/watch3.avif"],
+    "category": "Wearables",
+    "rating": 4.7,
+    "reviews": 412,
+    "description": "45mm, blood oxygen sensor, ECG, always-on Retina display",
+    "inStock": true,
+    "featured": true,
+    "slug": "apple-watch-8",
+    "colors": [
+      {
+        "name": "Midnight",
+        "images": ["/watch1.avif"]
+      },
+      {
+        "name": "Starlight",
+        "images": ["/watch2.avif"]
+      },
+      {
+        "name": "Silver",
+        "images": ["/watch3.avif"]
+      }
+    ],
+    "sizes": ["41mm", "45mm"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 1599,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free extra band with purchase",
+        "delivery": "Next day delivery",
+        "lastChecked": "2025-07-16T16:40:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 1699,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹2000 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 1799,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹8000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-17T08:45:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "Always-On Retina LTPO OLED" },
+      { "name": "Chip", "value": "Apple S8" },
+      { "name": "Sensors", "value": "Blood Oxygen, ECG, Temperature" },
+      { "name": "Water Resistance", "value": "50 meters" },
+      { "name": "Battery Life", "value": "Up to 18 hours" }
+    ],
+    "features": [
+      "Advanced health monitoring including temperature sensing",
+      "Crash Detection for emergencies",
+      "Always-On Retina display",
+      "Swimproof design"
+    ],
+    "priceHistory": [
+      { "date": "2025-05-01", "price": 1899, "lowestPrice": 1799 },
+      { "date": "2025-06-01", "price": 1799, "lowestPrice": 1699 },
+      { "date": "2025-07-01", "price": 1699, "lowestPrice": 1599 }
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "12",
+    "name": "Sony PlayStation 5 Digital Edition",
+    "price": 1799,
+    "originalPrice": 1999,
+    "discount": 10,
+    "image": "/ps5.jpg",
+    "images": ["/ps5.jpg"],
+    "category": "Gaming",
+    "rating": 4.9,
+    "reviews": 587,
+    "description": "825GB SSD, 4K UHD, 120Hz, DualSense controller",
+    "inStock": false,
+    "featured": true,
+    "slug": "ps5-digital",
+    "colors": [
+      {
+        "name": "White",
+        "images": ["/ps5.jpg"]
+      }
+    ],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 1749,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free game with purchase",
+        "delivery": "Pre-order available",
+        "lastChecked": "2025-07-17T09:25:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 1799,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹2000 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 1899,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹8000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-16T16:30:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Processor", "value": "AMD Zen 2, 8-core" },
+      { "name": "GPU", "value": "AMD RDNA 2, 10.3 TFLOPS" },
+      { "name": "Memory", "value": "16GB GDDR6" },
+      { "name": "Storage", "value": "825GB SSD" },
+      { "name": "Resolution", "value": "4K UHD at 120Hz" }
+    ],
+    "features": [
+      "Ultra-high speed SSD",
+      "Haptic feedback and adaptive triggers",
+      "3D AudioTech",
+      "4K UHD Blu-ray drive (in standard edition)"
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "13",
+    "name": "iPad Pro 12.9\"",
+    "price": 3899,
+    "originalPrice": 4299,
+    "discount": 9,
+    "image": "/tablet3.avif",
+    "images": ["/tablet1.avif", "/tablet2.avif", "/tablet3.avif"],
+    "category": "Tablets",
+    "rating": 4.8,
+    "reviews": 321,
+    "description": "M2 chip, Liquid Retina XDR display, 128GB storage",
+    "inStock": true,
+    "featured": true,
+    "slug": "ipad-pro-12-9",
+    "colors": [
+      {
+        "name": "Space Gray",
+        "images": ["/tablet1.avif"]
+      },
+      {
+        "name": "Silver",
+        "images": ["/tablet2.avif"]
+      },
+      {
+        "name": "Silver",
+        "images": ["/tablet3.avif"]
+      }
+    ],
+    "sizes": ["128GB", "256GB", "512GB", "1TB"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 3799,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free Apple Pencil with purchase",
+        "delivery": "Same day delivery available",
+        "lastChecked": "2025-07-16T18:15:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 3899,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹2000 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 3999,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹8000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-17T09:00:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "12.9\" Liquid Retina XDR" },
+      { "name": "Chip", "value": "Apple M2" },
+      { "name": "Storage", "value": "128GB" },
+      { "name": "Camera", "value": "12MP Wide + 10MP Ultra Wide" },
+      { "name": "Battery", "value": "Up to 10 hours" }
+    ],
+    "features": [
+      "M2 chip with 8-core CPU and 10-core GPU",
+      "Liquid Retina XDR display with ProMotion",
+      "Thunderbolt / USB 4 port",
+      "Face ID for secure authentication"
+    ],
+    "priceHistory": [
+      { "date": "2025-04-01", "price": 4299, "lowestPrice": 4199 },
+      { "date": "2025-05-15", "price": 4199, "lowestPrice": 3999 },
+      { "date": "2025-07-01", "price": 3899, "lowestPrice": 3799 }
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "14",
+    "name": "AirPods Pro (2nd Generation)",
+    "price": 1099,
+    "originalPrice": 1199,
+    "discount": 8,
+    "image": "/earpod2.avif",
+    "images": ["/earpod.avif", "/earpod2.avif", "/earpod3.avif"],
+    "category": "Audio",
+    "rating": 4.8,
+    "reviews": 498,
+    "description": "Active Noise Cancellation with Personalized Spatial Audio",
+    "inStock": true,
+    "featured": true,
+    "slug": "airpods-pro2",
+    "colors": [
+      {
+        "name": "White",
+        "images": ["/earpod.avif"]
+      },
+      {
+        "name": "White",
+        "images": ["/earpod2.avif"]
+      },
+      {
+        "name": "White",
+        "images": ["/earpod3.avif"]
+      }
+    ],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 1049,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Limited time discount",
+        "delivery": "Next day delivery",
+        "lastChecked": "2025-07-17T10:05:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 1099,
+        "url": "#",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹2000 off with SBI Credit Card",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:30:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 1149,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹8000",
+        "delivery": "Free shipping in 3 days",
+        "lastChecked": "2025-07-16T17:45:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Driver", "value": "Custom high-excursion Apple driver" },
+      { "name": "Active Noise Cancellation", "value": "Yes" },
+      { "name": "Battery Life", "value": "Up to 6 hours (ANC on)" },
+      { "name": "Case Battery", "value": "Over 30 hours" },
+      { "name": "Water Resistance", "value": "IPX4" }
+    ],
+    "features": [
+      "Active Noise Cancellation",
+      "Adaptive Transparency mode",
+      "Personalized Spatial Audio",
+      "Touch control with swipe volume adjustment"
+    ],
+    "priceHistory": [
+      { "date": "2025-05-01", "price": 1199, "lowestPrice": 1149 },
+      { "date": "2025-06-01", "price": 1149, "lowestPrice": 1099 },
+      { "date": "2025-07-01", "price": 1099, "lowestPrice": 1049 }
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "15",
+    "name": "iPhone 15 Pro",
+    "price": 4499,
+    "originalPrice": 4999,
+    "discount": 10,
+    "image": "/iphone2.avif",
+    "images": ["/iphone2.avif", "/iphone.avif"],
+    "category": "Smartphones",
+    "rating": 4.8,
+    "reviews": 1247,
+    "description": "A17 Pro chip with 6-core GPU, 48MP Main camera",
+    "inStock": true,
+    "featured": true,
+    "slug": "iphone-15-pro",
+    "colors": [
+      {
+        "name": "Titanium Black",
+        "images": ["/earpod3.avif"]
+      },
+      {
+        "name": "Titanium White",
+        "images": ["/earpod3.avif"]
+      },
+      {
+        "name": "Titanium Blue",
+        "images": ["/earpod3.avif"]
+      },
+      {
+        "name": "Titanium Natural",
+        "images": ["/earpod3.avif"]
+      }
+    ],
+    "sizes": ["128GB", "256GB", "512GB", "1TB"],
+    "offers": [
+      {
+        "source": "Noon",
+        "price": 4399,
+        "url": "#",
+        "logo": "/noon.png",
+        "description": "Free sport band with purchase",
+        "delivery": "Next day delivery",
+        "lastChecked": "2025-07-17T08:15:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Amazon",
+        "price": 4499,
+        "url": "https://amazon.in/product",
+        "logo": "/amazon.webp",
+        "description": "Extra ₹5000 off with HDFC Credit Card",
+        "delivery": "Free shipping in 1 day",
+        "lastChecked": "2025-07-17T11:00:00Z",
+        "isOfficialStore": true
+      },
+      {
+        "source": "Eros",
+        "price": 4599,
+        "url": "#",
+        "logo": "/Eros.webp",
+        "description": "Exchange discount up to ₹25000",
+        "delivery": "Free shipping in 2 days",
+        "lastChecked": "2025-07-17T10:45:00Z"
+      }
+    ],
+    "specifications": [
+      { "name": "Display", "value": "6.1\" Super Retina XDR" },
+      { "name": "Chip", "value": "A17 Pro" },
+      {
+        "name": "Camera",
+        "value": "48MP Main + 12MP Ultra Wide + 12MP Telephoto"
+      },
+      { "name": "Battery", "value": "Up to 23 hours video playback" },
+      { "name": "Material", "value": "Titanium with textured matte glass back" }
+    ],
+    "features": [
+      "A17 Pro chip with 6-core GPU",
+      "48MP Main camera with 24mm focal length",
+      "Action button for quick access to features",
+      "USB-C charging"
+    ],
+    "priceHistory": [
+      { "date": "2025-05-01", "price": 4999, "lowestPrice": 4799 },
+      { "date": "2025-06-01", "price": 4799, "lowestPrice": 4599 },
+      { "date": "2025-07-01", "price": 4499, "lowestPrice": 4399 }
+    ],
+    "isPopular": true
+  }
+]
