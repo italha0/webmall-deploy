@@ -1,0 +1,354 @@
+{
+  "categories": [
+    {
+      "name": "Mobiles",
+      "slug": "mobiles",
+      "subcategories": [
+        {
+          "name": "Smartphones",
+          "slug": "smartphones"
+        },
+        {
+          "name": "Foldable Phones",
+          "slug": "foldable-phones"
+        },
+        {
+          "name": "Gaming Phones",
+          "slug": "gaming-phones"
+        },
+        {
+          "name": "Refurbished Phones",
+          "slug": "refurbished-phones"
+        },
+        {
+          "name": "Feature Phones",
+          "slug": "feature-phones"
+        }
+      ]
+    },
+    {
+      "name": "Mobile Accessories",
+      "slug": "mobile-accessories",
+      "subcategories": [
+        {
+          "name": "Cases & Covers",
+          "slug": "cases-covers"
+        },
+        {
+          "name": "Screen Protectors",
+          "slug": "screen-protectors"
+        },
+        {
+          "name": "Chargers",
+          "slug": "chargers"
+        },
+        {
+          "name": "Power Banks",
+          "slug": "power-banks"
+        },
+        {
+          "name": "Cables & Adapters",
+          "slug": "cables-adapters"
+        },
+        {
+          "name": "Earphones",
+          "slug": "earphones"
+        },
+        {
+          "name": "Bluetooth Headsets",
+          "slug": "bluetooth-headsets"
+        }
+      ]
+    },
+    {
+      "name": "Laptops",
+      "slug": "laptops",
+      "subcategories": [
+        {
+          "name": "Gaming Laptops",
+          "slug": "gaming-laptops"
+        },
+        {
+          "name": "Business Laptops",
+          "slug": "business-laptops"
+        },
+        {
+          "name": "Student Laptops",
+          "slug": "student-laptops"
+        },
+        {
+          "name": "Ultrabooks",
+          "slug": "ultrabooks"
+        },
+        {
+          "name": "2-in-1 Laptops",
+          "slug": "2-in-1-laptops"
+        }
+      ]
+    },
+    {
+      "name": "Laptop Accessories",
+      "slug": "laptop-accessories",
+      "subcategories": [
+        {
+          "name": "Bags & Sleeves",
+          "slug": "bags-sleeves"
+        },
+        {
+          "name": "Cooling Pads",
+          "slug": "cooling-pads"
+        },
+        {
+          "name": "External Keyboards",
+          "slug": "external-keyboards"
+        },
+        {
+          "name": "Mice",
+          "slug": "mice"
+        },
+        {
+          "name": "Docking Stations",
+          "slug": "docking-stations"
+        }
+      ]
+    },
+    {
+      "name": "Televisions",
+      "slug": "televisions",
+      "subcategories": [
+        {
+          "name": "Smart TVs",
+          "slug": "smart-tvs"
+        },
+        {
+          "name": "4K Ultra HD TVs",
+          "slug": "4k-ultra-hd-tvs"
+        },
+        {
+          "name": "Android TVs",
+          "slug": "android-tvs"
+        },
+        {
+          "name": "QLED TVs",
+          "slug": "qled-tvs"
+        },
+        {
+          "name": "OLED TVs",
+          "slug": "oled-tvs"
+        }
+      ]
+    },
+    {
+      "name": "Appliances",
+      "slug": "appliances",
+      "subcategories": [
+        {
+          "name": "Refrigerators",
+          "slug": "refrigerators"
+        },
+        {
+          "name": "Washing Machines",
+          "slug": "washing-machines"
+        },
+        {
+          "name": "Microwave Ovens",
+          "slug": "microwave-ovens"
+        },
+        {
+          "name": "Air Conditioners",
+          "slug": "air-conditioners"
+        },
+        {
+          "name": "Water Purifiers",
+          "slug": "water-purifiers"
+        },
+        {
+          "name": "Vacuum Cleaners",
+          "slug": "vacuum-cleaners"
+        }
+      ]
+    },
+    {
+      "name": "Audio Devices",
+      "slug": "audio-devices",
+      "subcategories": [
+        {
+          "name": "Bluetooth Speakers",
+          "slug": "bluetooth-speakers"
+        },
+        {
+          "name": "Soundbars",
+          "slug": "soundbars"
+        },
+        {
+          "name": "Home Theaters",
+          "slug": "home-theaters"
+        },
+        {
+          "name": "Headphones",
+          "slug": "headphones"
+        },
+        {
+          "name": "Wireless Earbuds",
+          "slug": "wireless-earbuds"
+        }
+      ]
+    },
+    {
+      "name": "Wearables",
+      "slug": "wearables",
+      "subcategories": [
+        {
+          "name": "Smartwatches",
+          "slug": "smartwatches"
+        },
+        {
+          "name": "Fitness Bands",
+          "slug": "fitness-bands"
+        },
+        {
+          "name": "Kids Smartwatches",
+          "slug": "kids-smartwatches"
+        },
+        {
+          "name": "Smart Rings",
+          "slug": "smart-rings"
+        }
+      ]
+    },
+    {
+      "name": "Cameras",
+      "slug": "cameras",
+      "subcategories": [
+        {
+          "name": "DSLR Cameras",
+          "slug": "dslr-cameras"
+        },
+        {
+          "name": "Mirrorless Cameras",
+          "slug": "mirrorless-cameras"
+        },
+        {
+          "name": "Point & Shoot Cameras",
+          "slug": "point-shoot-cameras"
+        },
+        {
+          "name": "Action Cameras",
+          "slug": "action-cameras"
+        },
+        {
+          "name": "Security Cameras",
+          "slug": "security-cameras"
+        }
+      ]
+    },
+    {
+      "name": "Gaming",
+      "slug": "gaming",
+      "subcategories": [
+        {
+          "name": "Consoles",
+          "slug": "consoles"
+        },
+        {
+          "name": "Gaming Laptops",
+          "slug": "gaming-laptops"
+        },
+        {
+          "name": "Controllers",
+          "slug": "controllers"
+        },
+        {
+          "name": "Gaming Chairs",
+          "slug": "gaming-chairs"
+        },
+        {
+          "name": "VR Headsets",
+          "slug": "vr-headsets"
+        }
+      ]
+    },
+    {
+      "name": "Home & Kitchen",
+      "slug": "home-kitchen",
+      "subcategories": [
+        {
+          "name": "Microwaves",
+          "slug": "microwaves"
+        },
+        {
+          "name": "Cooktops",
+          "slug": "cooktops"
+        },
+        {
+          "name": "Blenders & Mixers",
+          "slug": "blenders-mixers"
+        },
+        {
+          "name": "Water Heaters",
+          "slug": "water-heaters"
+        },
+        {
+          "name": "Air Purifiers",
+          "slug": "air-purifiers"
+        },
+        {
+          "name": "Fans & Coolers",
+          "slug": "fans-coolers"
+        }
+      ]
+    },
+    {
+      "name": "Fashion",
+      "slug": "fashion",
+      "subcategories": [
+        {
+          "name": "Men's Clothing",
+          "slug": "mens-clothing"
+        },
+        {
+          "name": "Women's Clothing",
+          "slug": "womens-clothing"
+        },
+        {
+          "name": "Shoes",
+          "slug": "shoes"
+        },
+        {
+          "name": "Watches",
+          "slug": "watches"
+        },
+        {
+          "name": "Bags & Wallets",
+          "slug": "bags-wallets"
+        }
+      ]
+    },
+    {
+      "name": "Beauty",
+      "slug": "beauty",
+      "subcategories": [
+        {
+          "name": "Hair Care",
+          "slug": "hair-care"
+        },
+        {
+          "name": "Skin Care",
+          "slug": "skin-care"
+        },
+        {
+          "name": "Makeup",
+          "slug": "makeup"
+        },
+        {
+          "name": "Fragrances",
+          "slug": "fragrances"
+        },
+        {
+          "name": "Grooming Tools",
+          "slug": "grooming-tools"
+        }
+      ]
+    }
+  ]
+}
