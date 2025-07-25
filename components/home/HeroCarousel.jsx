@@ -45,7 +45,7 @@ const HeroCarousel = ({className=""}) => {
   };
 
   return (
-    <div className={`${className} relative w-full  px-2`}>
+    <div className={`${className} relative w-full aspect-[16/9] lg:aspect-[16/3] px-2`}>
       {/* Custom Navigation Buttons */}
       <button
         ref={prevRef}

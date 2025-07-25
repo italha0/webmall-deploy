@@ -12,7 +12,7 @@ const HeroSection = () => {
     <>
       <div className="container mx-auto">
         <div className="mt-10 md:mt-12 flex justify-center">
-          <HeroCarousel className="max-w-[948px]" />
+          <HeroCarousel className="lg:w-[948px] xl:w-[1008px]" />
           <Image
             src="/bannerright.png"
             alt="rightbanner"

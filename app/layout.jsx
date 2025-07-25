@@ -29,20 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-       
-        <Header />
+          <Header />
           {children}
-          <Toaster
-            position="top-right"
-            toastOptions={{
-              duration: 1000,
-              style: {
-                background: "#363636",
-                color: "#fff",
-              },
-            }}
-          />
-        <Footer />
+        
+          <Footer />
       </body>
     </html>
   );
