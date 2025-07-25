@@ -16,7 +16,6 @@ const HeroSection = () => {
           </div>
 
           <div className="w-[30%] flex flex-row h-full">
-            {/* Left Banner */}
             <div className="w-[calc(100%-8px)] relative  overflow-hidden group cursor-pointer">
               <Image
                 src="/rightbanner.png"

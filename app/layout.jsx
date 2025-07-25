@@ -27,11 +27,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Header />
         <div className="container mx-auto">
-          <Header />
           <main>{children}</main>
-          <Footer />
         </div>
+        <Footer />
       </body>
     </html>
   );
