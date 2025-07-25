@@ -10,9 +10,9 @@ import HeroCarousel from './HeroCarousel'
 const HeroSection = () => {
   return (
     <>
-      <div className="container">
-        <div className="mt-10 md:mt-12 max-w-[948px] flex justify-between">
-          <HeroCarousel/>
+      <div className="container mx-auto">
+        <div className="mt-10 md:mt-12 flex justify-center">
+          <HeroCarousel className="max-w-[948px]" />
           <Image
             src="/bannerright.png"
             alt="rightbanner"

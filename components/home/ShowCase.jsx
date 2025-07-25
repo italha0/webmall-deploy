@@ -75,7 +75,7 @@ const ShowCase = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 py-8">
+      <div className="container items-center mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 px-4 py-8">
         {/* Section 1: More reasons to shop */}
         <div className="hidden md:block">
           <h4 className="text-2xl font-bold mb-4 text-gray-500">

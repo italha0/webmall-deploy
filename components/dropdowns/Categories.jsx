@@ -28,12 +28,12 @@ const NavigationDropdowns = () => {
   return (
     <div className="hidden lg:block sticky top-[70px] z-[1030] bg-white border-b shadow-sm">
       <div className="container-fluid mx-auto px-4">
-        <nav className="flex items-center justify-between gap-6 py-1 mx-6 flex-wrap">
-          {/* Shop by Category dropdown (external) */}
+        <nav className="flex items-center justify-between gap-2 py-1 mx-6 flex-wrap">
+         
           <ShopByCategories />
 
           {/* Category Menus */}
-          {categories.map((category, index) => (
+          {categories.slice(0, 7).map((category, index) => (
             <div
               key={category.slug}
               className="relative"
