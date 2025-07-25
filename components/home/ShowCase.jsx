@@ -75,7 +75,7 @@ const ShowCase = () => {
 
   return (
     <>
-      <div className="container items-center mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 px-4 py-8">
+      <div className="container items-center mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 ">
         {/* Section 1: More reasons to shop */}
         <div className="hidden md:block">
           <h4 className="text-2xl font-bold mb-4 text-gray-500">
@@ -132,11 +132,11 @@ const ShowCase = () => {
         </div>
 
         {/* Section 3: In focus */}
-        <div className="flex-col gap-4 items-center justify-center">
+        <div className="flex-col gap-4 items-center justify-center mx-auto">
           <div className="rounded-xl overflow-hidden ">
             <Image
               src="/ad2.avif"
-              width={400}
+              width={440}
               height={300}
               alt="Elevate your style"
             />
@@ -144,7 +144,7 @@ const ShowCase = () => {
           <div className="rounded-xl overflow-hidden pt-5">
             <Image
               src="/ad1.avif"
-              width={400}
+              width={440}
               height={300}
               alt="Splash Event"
             />

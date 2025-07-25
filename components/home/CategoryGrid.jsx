@@ -43,7 +43,7 @@ const CategoriesSwiper = () => {
   ];
 
   return (
-    <div className="container mx-auto bg-white py-6 overflow-x-auto  scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-200">
+    <div className="container  mx-auto bg-white py-6 overflow-x-auto  scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-200">
       <div className="relative">
         <Swiper
           modules={[Autoplay]}
