@@ -22,14 +22,15 @@ export default function Home() {
 
   return (
     <>
-     
-        <HeroSection />
-        <ShowCase />
-        <ProductGrid title="Most Popular" products={products} swiperMode={true} />
-        <ProductGrid title="Featured" products={products} swiperMode={true} />
+      <HeroSection />
+      <ShowCase />
+      <ProductGrid title="Most Popular" products={products} swiperMode={true} />
+      <div className="h-[290px]">
         <HeroCarousel />
-        <ProductGrid title="Trending" products={products} swiperMode={true} />
-     
+      </div>
+      <ProductGrid title="Featured" products={products} swiperMode={true} />
+
+      <ProductGrid title="Trending" products={products} swiperMode={true} />
     </>
   );
 }

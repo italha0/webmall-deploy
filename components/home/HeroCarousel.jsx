@@ -28,7 +28,7 @@ const bannerSlides = [
   },
 ];
 
-const HeroCarousel = ({ className = "" }) => {
+const HeroCarousel = ({  }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -42,19 +42,19 @@ const HeroCarousel = ({ className = "" }) => {
 
   return (
     <div
-      className={`${className} relative w-full h-full  overflow-hidden shadow-lg`}
+      className="relative w-full h-full  overflow-hidden"
     >
       {/* Custom Navigation Buttons */}
       <button
         ref={prevRef}
-        className="hidden md:block absolute top-1/2 left-6 z-20 -translate-y-1/2 bg-white/95 backdrop-blur-sm p-3 rounded-full shadow-xl hover:bg-white hover:scale-110 transition-all duration-300 focus:outline-none"
+        className="hidden md:block absolute top-1/2 left-6 z-20 -translate-y-1/2 bg-white/95 backdrop-blur-sm p-1 rounded-full  hover:bg-white hover:scale-110 transition-all duration-300 focus:outline-none"
       >
         <ChevronLeft className="w-6 h-6 text-gray-800" />
       </button>
 
       <button
         ref={nextRef}
-        className="hidden md:block absolute top-1/2 right-6 z-20 -translate-y-1/2 bg-white/95 backdrop-blur-sm p-3 rounded-full shadow-xl hover:bg-white hover:scale-110 transition-all duration-300 focus:outline-none"
+        className="hidden md:block absolute top-1/2 right-6 z-20 -translate-y-1/2 bg-white/95 backdrop-blur-sm p-1 rounded-full  hover:bg-white hover:scale-110 transition-all duration-300 focus:outline-none"
       >
         <ChevronRight className="w-6 h-6 text-gray-800" />
       </button>
@@ -85,8 +85,8 @@ const HeroCarousel = ({ className = "" }) => {
               <Image
                 src={slide.image || "/placeholder.svg"}
                 fill
-                alt={slide.title}
-                className="object-cover"
+                alt="banner"
+                className="object-cover "
                 priority
               />
             </div>
