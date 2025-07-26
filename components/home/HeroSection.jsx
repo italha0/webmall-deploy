@@ -41,15 +41,9 @@ const HeroSection = () => {
               src="/mobilebanner.avif"
               alt="mobile banner"
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              className="object-contain group-hover:scale-105 transition-transform duration-500"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent">
-              <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-                <h4 className="text-white text-lg font-bold">Special Offers</h4>
-                <p className="text-white/90 text-sm">Up to 50% Off</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -66,16 +60,9 @@ const HeroSection = () => {
             src="/mobilebanner2.avif"
             alt="mobile banner 2"
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            className="object-contain group-hover:scale-105 transition-transform duration-500"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-transparent">
-            <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-              <span className="bg-white text-purple-600 px-3 py-1 rounded-full text-xs font-bold">
-                NEW ARRIVALS
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </>

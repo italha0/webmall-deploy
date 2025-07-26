@@ -1,354 +1,362 @@
 {
   "categories": [
     {
+      "id": "mobiles",
       "name": "Mobiles",
       "slug": "mobiles",
       "subcategories": [
         {
+          "id": "smartphones",
           "name": "Smartphones",
           "slug": "smartphones"
         },
         {
+          "id": "foldable-phones",
           "name": "Foldable Phones",
           "slug": "foldable-phones"
         },
         {
+          "id": "gaming-phones",
           "name": "Gaming Phones",
           "slug": "gaming-phones"
         },
         {
+          "id": "refurbished-phones",
           "name": "Refurbished Phones",
           "slug": "refurbished-phones"
         },
         {
+          "id": "feature-phones",
           "name": "Feature Phones",
           "slug": "feature-phones"
+        },
+        {
+          "id": "all-mobiles",
+          "name": "All Mobiles",
+          "slug": "all-mobiles"
         }
       ]
     },
     {
+      "id": "mobile-accessories",
       "name": "Mobile Accessories",
       "slug": "mobile-accessories",
       "subcategories": [
         {
+          "id": "cases-covers",
           "name": "Cases & Covers",
           "slug": "cases-covers"
         },
         {
+          "id": "screen-protectors",
           "name": "Screen Protectors",
           "slug": "screen-protectors"
         },
         {
+          "id": "chargers",
           "name": "Chargers",
           "slug": "chargers"
         },
         {
+          "id": "power-banks",
           "name": "Power Banks",
           "slug": "power-banks"
         },
         {
+          "id": "cables-adapters",
           "name": "Cables & Adapters",
           "slug": "cables-adapters"
         },
         {
-          "name": "Earphones",
-          "slug": "earphones"
-        },
-        {
-          "name": "Bluetooth Headsets",
-          "slug": "bluetooth-headsets"
+          "id": "all-mobile-accessories",
+          "name": "All Mobile Accessories",
+          "slug": "all-mobile-accessories"
         }
       ]
     },
     {
+      "id": "laptops",
       "name": "Laptops",
       "slug": "laptops",
       "subcategories": [
         {
+          "id": "gaming-laptops",
           "name": "Gaming Laptops",
           "slug": "gaming-laptops"
         },
         {
+          "id": "business-laptops",
           "name": "Business Laptops",
           "slug": "business-laptops"
         },
         {
+          "id": "student-laptops",
           "name": "Student Laptops",
           "slug": "student-laptops"
         },
         {
+          "id": "ultrabooks",
           "name": "Ultrabooks",
           "slug": "ultrabooks"
         },
         {
+          "id": "2-in-1-laptops",
           "name": "2-in-1 Laptops",
           "slug": "2-in-1-laptops"
+        },
+        {
+          "id": "all-laptops",
+          "name": "All Laptops",
+          "slug": "all-laptops"
         }
       ]
     },
     {
-      "name": "Laptop Accessories",
-      "slug": "laptop-accessories",
-      "subcategories": [
-        {
-          "name": "Bags & Sleeves",
-          "slug": "bags-sleeves"
-        },
-        {
-          "name": "Cooling Pads",
-          "slug": "cooling-pads"
-        },
-        {
-          "name": "External Keyboards",
-          "slug": "external-keyboards"
-        },
-        {
-          "name": "Mice",
-          "slug": "mice"
-        },
-        {
-          "name": "Docking Stations",
-          "slug": "docking-stations"
-        }
-      ]
-    },
-    {
+      "id": "televisions",
       "name": "Televisions",
       "slug": "televisions",
       "subcategories": [
         {
+          "id": "smart-tvs",
           "name": "Smart TVs",
           "slug": "smart-tvs"
         },
         {
+          "id": "4k-ultra-hd-tvs",
           "name": "4K Ultra HD TVs",
           "slug": "4k-ultra-hd-tvs"
         },
         {
+          "id": "android-tvs",
           "name": "Android TVs",
           "slug": "android-tvs"
         },
         {
+          "id": "qled-tvs",
           "name": "QLED TVs",
           "slug": "qled-tvs"
         },
         {
+          "id": "oled-tvs",
           "name": "OLED TVs",
           "slug": "oled-tvs"
+        },
+        {
+          "id": "all-tvs",
+          "name": "All Televisions",
+          "slug": "all-tvs"
         }
       ]
     },
     {
+      "id": "appliances",
       "name": "Appliances",
       "slug": "appliances",
       "subcategories": [
         {
+          "id": "refrigerators",
           "name": "Refrigerators",
           "slug": "refrigerators"
         },
         {
+          "id": "washing-machines",
           "name": "Washing Machines",
           "slug": "washing-machines"
         },
         {
-          "name": "Microwave Ovens",
-          "slug": "microwave-ovens"
-        },
-        {
+          "id": "air-conditioners",
           "name": "Air Conditioners",
           "slug": "air-conditioners"
         },
         {
-          "name": "Water Purifiers",
-          "slug": "water-purifiers"
-        },
-        {
-          "name": "Vacuum Cleaners",
-          "slug": "vacuum-cleaners"
+          "id": "all-appliances",
+          "name": "All Appliances",
+          "slug": "all-appliances"
         }
       ]
     },
     {
+      "id": "audio-devices",
       "name": "Audio Devices",
       "slug": "audio-devices",
       "subcategories": [
         {
-          "name": "Bluetooth Speakers",
-          "slug": "bluetooth-speakers"
-        },
-        {
-          "name": "Soundbars",
-          "slug": "soundbars"
-        },
-        {
-          "name": "Home Theaters",
-          "slug": "home-theaters"
-        },
-        {
+          "id": "headphones",
           "name": "Headphones",
           "slug": "headphones"
         },
         {
+          "id": "wireless-earbuds",
           "name": "Wireless Earbuds",
           "slug": "wireless-earbuds"
+        },
+        {
+          "id": "speakers",
+          "name": "Speakers",
+          "slug": "speakers"
+        },
+        {
+          "id": "all-audio",
+          "name": "All Audio Devices",
+          "slug": "all-audio"
         }
       ]
     },
     {
-      "name": "Wearables",
-      "slug": "wearables",
+      "id": "home-furniture",
+      "name": "Home & Furniture",
+      "slug": "home-furniture",
       "subcategories": [
         {
-          "name": "Smartwatches",
-          "slug": "smartwatches"
+          "id": "living-room",
+          "name": "Living Room",
+          "slug": "living-room",
+          "subcategories": [
+            {
+              "id": "sofas",
+              "name": "Sofas",
+              "slug": "sofas"
+            },
+            {
+              "id": "tables",
+              "name": "Tables",
+              "slug": "tables"
+            },
+            {
+              "id": "tv-units",
+              "name": "TV Units",
+              "slug": "tv-units"
+            }
+          ]
         },
         {
-          "name": "Fitness Bands",
-          "slug": "fitness-bands"
+          "id": "bedroom",
+          "name": "Bedroom",
+          "slug": "bedroom",
+          "subcategories": [
+            {
+              "id": "beds",
+              "name": "Beds",
+              "slug": "beds"
+            },
+            {
+              "id": "wardrobes",
+              "name": "Wardrobes",
+              "slug": "wardrobes"
+            },
+            {
+              "id": "dressing-tables",
+              "name": "Dressing Tables",
+              "slug": "dressing-tables"
+            }
+          ]
         },
         {
-          "name": "Kids Smartwatches",
-          "slug": "kids-smartwatches"
+          "id": "home-decor",
+          "name": "Home Decor",
+          "slug": "home-decor",
+          "subcategories": [
+            {
+              "id": "lamps-lighting",
+              "name": "Lamps & Lighting",
+              "slug": "lamps-lighting"
+            },
+            {
+              "id": "wall-art",
+              "name": "Wall Art",
+              "slug": "wall-art"
+            },
+            {
+              "id": "curtains-blinds",
+              "name": "Curtains & Blinds",
+              "slug": "curtains-blinds"
+            }
+          ]
         },
         {
-          "name": "Smart Rings",
-          "slug": "smart-rings"
+          "id": "all-home-furniture",
+          "name": "All Home & Furniture",
+          "slug": "all-home-furniture"
         }
       ]
     },
-    {
-      "name": "Cameras",
-      "slug": "cameras",
-      "subcategories": [
-        {
-          "name": "DSLR Cameras",
-          "slug": "dslr-cameras"
-        },
-        {
-          "name": "Mirrorless Cameras",
-          "slug": "mirrorless-cameras"
-        },
-        {
-          "name": "Point & Shoot Cameras",
-          "slug": "point-shoot-cameras"
-        },
-        {
-          "name": "Action Cameras",
-          "slug": "action-cameras"
-        },
-        {
-          "name": "Security Cameras",
-          "slug": "security-cameras"
-        }
-      ]
-    },
-    {
-      "name": "Gaming",
-      "slug": "gaming",
-      "subcategories": [
-        {
-          "name": "Consoles",
-          "slug": "consoles"
-        },
-        {
-          "name": "Gaming Laptops",
-          "slug": "gaming-laptops"
-        },
-        {
-          "name": "Controllers",
-          "slug": "controllers"
-        },
-        {
-          "name": "Gaming Chairs",
-          "slug": "gaming-chairs"
-        },
-        {
-          "name": "VR Headsets",
-          "slug": "vr-headsets"
-        }
-      ]
-    },
-    {
-      "name": "Home & Kitchen",
-      "slug": "home-kitchen",
-      "subcategories": [
-        {
-          "name": "Microwaves",
-          "slug": "microwaves"
-        },
-        {
-          "name": "Cooktops",
-          "slug": "cooktops"
-        },
-        {
-          "name": "Blenders & Mixers",
-          "slug": "blenders-mixers"
-        },
-        {
-          "name": "Water Heaters",
-          "slug": "water-heaters"
-        },
-        {
-          "name": "Air Purifiers",
-          "slug": "air-purifiers"
-        },
-        {
-          "name": "Fans & Coolers",
-          "slug": "fans-coolers"
-        }
-      ]
-    },
-    {
-      "name": "Fashion",
-      "slug": "fashion",
-      "subcategories": [
-        {
-          "name": "Men's Clothing",
-          "slug": "mens-clothing"
-        },
-        {
-          "name": "Women's Clothing",
-          "slug": "womens-clothing"
-        },
-        {
-          "name": "Shoes",
-          "slug": "shoes"
-        },
-        {
-          "name": "Watches",
-          "slug": "watches"
-        },
-        {
-          "name": "Bags & Wallets",
-          "slug": "bags-wallets"
-        }
-      ]
-    },
-    {
-      "name": "Beauty",
-      "slug": "beauty",
-      "subcategories": [
-        {
-          "name": "Hair Care",
-          "slug": "hair-care"
-        },
-        {
-          "name": "Skin Care",
-          "slug": "skin-care"
-        },
-        {
-          "name": "Makeup",
-          "slug": "makeup"
-        },
-        {
-          "name": "Fragrances",
-          "slug": "fragrances"
-        },
-        {
-          "name": "Grooming Tools",
-          "slug": "grooming-tools"
-        }
-      ]
-    }
+   {
+     "id": "books-media",
+     "name": "Books & Media",
+     "slug": "books-media",
+     "subcategories": [
+       {
+         "id": "book-genres",
+         "name": "Book Genres",
+         "slug": "book-genres",
+         "subcategories": [
+           {
+             "id": "fiction",
+             "name": "Fiction",
+             "slug": "fiction"
+           },
+           {
+             "id": "non-fiction",
+             "name": "Non-Fiction",
+             "slug": "non-fiction"
+           },
+           {
+             "id": "sci-fi-fantasy",
+             "name": "Sci-Fi & Fantasy",
+             "slug": "sci-fi-fantasy"
+           }
+         ]
+       },
+       {
+         "id": "media-formats",
+         "name": "Media Formats",
+         "slug": "media-formats",
+         "subcategories": [
+           {
+             "id": "audiobooks",
+             "name": "Audiobooks",
+             "slug": "audiobooks"
+           },
+           {
+             "id": "ebooks",
+             "name": "eBooks",
+             "slug": "ebooks"
+           },
+           {
+             "id": "physical-books",
+             "name": "Physical Books",
+             "slug": "physical-books"
+           }
+         ]
+       },
+       {
+         "id": "educational",
+         "name": "Educational",
+         "slug": "educational",
+         "subcategories": [
+           {
+             "id": "textbooks",
+             "name": "Textbooks",
+             "slug": "textbooks"
+           },
+           {
+             "id": "language-learning",
+             "name": "Language Learning",
+             "slug": "language-learning"
+           },
+           {
+             "id": "professional-development",
+             "name": "Professional Development",
+             "slug": "professional-development"
+           }
+         ]
+       },
+       {
+         "id": "all-books-media",
+         "name": "All Books & Media",
+         "slug": "all-books-media"
+       }
+     ]
+   }
   ]
 }

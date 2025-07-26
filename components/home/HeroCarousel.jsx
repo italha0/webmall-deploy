@@ -28,7 +28,7 @@ const bannerSlides = [
   },
 ];
 
-const HeroCarousel = ({  }) => {
+const HeroCarousel = ({}) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -41,9 +41,7 @@ const HeroCarousel = ({  }) => {
   };
 
   return (
-    <div
-      className="relative w-full h-full  overflow-hidden"
-    >
+    <div className="relative w-full h-full  overflow-hidden">
       {/* Custom Navigation Buttons */}
       <button
         ref={prevRef}
@@ -86,7 +84,7 @@ const HeroCarousel = ({  }) => {
                 src={slide.image || "/placeholder.svg"}
                 fill
                 alt="banner"
-                className="object-cover "
+                className="object-cover"
                 priority
               />
             </div>

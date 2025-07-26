@@ -32,7 +32,7 @@ const ProductGrid = ({
 
   return (
     <section className="py-4 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {showTitle && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
