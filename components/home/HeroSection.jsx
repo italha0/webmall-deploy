@@ -7,9 +7,9 @@ import HeroCarousel from "./HeroCarousel";
 const HeroSection = () => {
   return (
     <>
-      <div className="container mx-auto px-2 mt-14">
+      <div className="container mx-auto  mt-12">
         {/* Desktop Layout */}
-        <div className="hidden md:flex mt-4 h-[197px] gap-2">
+        <div className="hidden md:flex mt-4 h-[200px] gap-2">
           {/* Main Banner Carousel - Takes up 70% width */}
           <div className="w-[70%] h-full">
             <HeroCarousel />
