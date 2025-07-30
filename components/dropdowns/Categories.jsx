@@ -40,7 +40,6 @@ const NavigationDropdowns = () => {
       setActiveDropdown(null);
     }, 150);
   };
-
   // Group categories by parent to create the dropdown structure
   const groupedCategories = categories.reduce((acc, category) => {
     const parentName = category.parent_name || "Other";

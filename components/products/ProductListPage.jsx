@@ -175,14 +175,13 @@ const FilterSidebar = ({
 
 const productList = () => {
   return (
-    <div className="min-h-screen mt-5 bg-gray-50">
-      <div className="mx-auto py-6">
+    <div className="min-h-screen  bg-gray-50">
+      <div className="mx-auto">
         <div className="flex flex-col md:flex-row gap-6">
           {/* Sidebar */}
           <div className="hidden md:block w-[14rem] flex-shrink-0">
             <FilterSidebar />
           </div>
-
           {/* Main Content */}
           <div className="flex-1">
             <motion.div
@@ -190,7 +189,7 @@ const productList = () => {
               animate={{ y: 0, opacity: 1 }}
               className="mb-6"
             >
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              <h1 className="text-2xl font-bold text-gray-900 mt-2">
                 116 Results were found
               </h1>
             </motion.div>

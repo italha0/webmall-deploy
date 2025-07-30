@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
 
           {/* Categories - Enhanced for Mobile */}
-          <div className="space-y-3 lg:space-y-4">
+          <div className="hidden md:block space-y-3 lg:space-y-4">
             <h3 className="text-base lg:text-lg font-semibold text-white border-b border-gray-600 pb-2 lg:border-b-0 lg:pb-0">
               Categories
             </h3>
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
 
           {/* Useful Links - Enhanced for Mobile */}
-          <div className=" space-y-3 lg:space-y-4">
+          <div className="hidden md:block space-y-3 lg:space-y-4">
             <h3 className="text-base lg:text-lg font-semibold text-white border-b border-gray-600 pb-2 lg:border-b-0 lg:pb-0">
               Useful Links
             </h3>

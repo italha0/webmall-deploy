@@ -8,8 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-
-import { fetchFromApi } from "@/lib/api"; // Adjust this path to where your fetch function is
+import { fetchFromApi } from "@/lib/api"; 
 
 const HeroCarousel = () => {
   const prevRef = useRef(null);
@@ -31,12 +30,7 @@ useEffect(() => {
           id: 1,
           file: "/Banner4.gif",
           image: "/Banner4.gif",
-        },
-        {
-          id: 2,
-          file: "/Banner2.png",
-          image: "/Banner2.png",
-        },
+        }
       ]);
     } 
   };
@@ -51,7 +45,7 @@ useEffect(() => {
   };
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden hidden md:block">
       {/* Custom Nav Buttons */}
       <button
         ref={prevRef}

@@ -130,9 +130,8 @@ const ShowCase = () => {
             ))}
           </div>
         </div>
-
         {/* Section 3: In focus */}
-        <div className="flex-col gap-4 items-center justify-center mx-auto">
+        <div className="flex-col gap-4 items-center justify-center mx-auto hidden md:block">
           <div className="rounded-xl overflow-hidden ">
             <Image
               src="/ad2.avif"

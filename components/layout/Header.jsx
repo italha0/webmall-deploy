@@ -36,58 +36,21 @@ const Header = () => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0070bf]">
-       
-          <div className="container mx-auto flex items-center justify-between px-4 py-3">
-            {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/logo.png"
-                alt="WebMall"
-                width={200}
-                height={60}
-                priority
-              />
-            </Link>
+        <div className="container mx-auto flex items-center justify-between px-4 py-3">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="WebMall"
+              width={200}
+              height={60}
+              priority
+            />
+          </Link>
 
-            {/* Search Bar */}
-            <div className="hidden max-w-lg md:flex flex-1 mx-4">
-              <div className="relative w-full">
-                <Input
-                  type="text"
-                  placeholder="What are you looking for?"
-                  className="w-full py-2 pl-4 pr-10 rounded-md text-gray-800"
-                />
-                <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5" />
-              </div>
-            </div>
-
-            {/* App Store Buttons */}
-            <div className="hidden md:flex items-center gap-2">
-              <Image src="/ios.png" alt="App Store" width={120} height={40} />
-              <Image
-                src="/google.png"
-                alt="Google Play"
-                width={120}
-                height={40}
-              />
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden flex items-center gap-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsMenuOpen(true)}
-                className="text-white"
-              >
-                <Menu />
-              </Button>
-            </div>
-          </div>
-
-          {/* Mobile Search */}
-          <div className="md:hidden px-4 pb-3">
-            <div className="relative">
+          {/* Search Bar */}
+          <div className="hidden max-w-lg md:flex flex-1 mx-4">
+            <div className="relative w-full">
               <Input
                 type="text"
                 placeholder="What are you looking for?"
@@ -96,8 +59,43 @@ const Header = () => {
               <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5" />
             </div>
           </div>
-          <NavigationDropdowns />
-        
+
+          {/* App Store Buttons */}
+          <div className="hidden md:flex items-center gap-2">
+            <Image src="/ios.png" alt="App Store" width={120} height={40} />
+            <Image
+              src="/google.png"
+              alt="Google Play"
+              width={120}
+              height={40}
+            />
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(true)}
+              className="text-white"
+            >
+              <Menu />
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Search */}
+        <div className="md:hidden px-4 pb-3">
+          <div className="relative">
+            <Input
+              type="text"
+              placeholder="What are you looking for?"
+              className="w-full py-2 pl-4 pr-10 rounded-md text-gray-800"
+            />
+            <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5" />
+          </div>
+        </div>
+        <NavigationDropdowns />
       </header>
 
       {/* Mobile Menu */}
@@ -108,7 +106,7 @@ const Header = () => {
       />
 
       {/* Spacer div */}
-      <div className="h-[90px] lg:h-[70px] "></div>
+      <div className="h-[116px] "></div>
     </>
   );
 };

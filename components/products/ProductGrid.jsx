@@ -60,7 +60,6 @@ const ProductGrid = ({
             )}
           </motion.div>
         )}
-
         {swiperMode ? (
           <div className="relative ">
             <Swiper

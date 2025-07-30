@@ -43,16 +43,16 @@ const CategoriesSwiper = () => {
   ];
 
   return (
-    <div className="container  mx-auto bg-white py-3 overflow-x-auto  scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-200">
+    <div className="container mx-auto bg-white py-3 overflow-x-auto  scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-200">
       <div className="relative">
         <Swiper
           modules={[Autoplay]}
           autoplay={{ delay: 2000 }}
           loop={true}
           spaceBetween={2}
-          slidesPerView={6}
+          slidesPerView={5}
           breakpoints={{
-            640: { slidesPerView: 4 },
+            640: { slidesPerView: 2 },
             768: { slidesPerView: 6 },
             1024: { slidesPerView: 10 },
           }}
