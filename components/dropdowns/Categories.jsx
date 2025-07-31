@@ -40,15 +40,19 @@ const NavigationDropdowns = () => {
       setActiveDropdown(null);
     }, 150);
   };
-  // Group categories by parent to create the dropdown structure
-  const groupedCategories = categories.reduce((acc, category) => {
-    const parentName = category.parent_name || "Other";
+
+  // Filter out categories without parent_name first
+  const categoriesWithParent = categories.filter(
+    (category) => category.parent_name
+  );
+
+  // Group categories by parent
+  const groupedCategories = categoriesWithParent.reduce((acc, category) => {
+    const parentName = category.parent_name;
     if (!acc[parentName]) {
       acc[parentName] = {
         name: parentName,
-        slug: category.parent_name
-          ? category.parent_name.toLowerCase().replace(/\s+/g, "-")
-          : "other",
+        slug: parentName.toLowerCase().replace(/\s+/g, "-"),
         subcategories: [],
       };
     }
@@ -111,7 +115,7 @@ const NavigationDropdowns = () => {
                         <li key={subcategory.slug}>
                           <Link
                             href={`/products/${subcategory.slug}`}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-500 transition-colors"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-500 transition-colors capitalize"
                           >
                             {subcategory.name}
                           </Link>

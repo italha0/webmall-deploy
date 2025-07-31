@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { fetchFromApi } from "@/lib/api";
+import { getBannerList } from "@/lib/api";
 
 const MobileCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,13 +13,30 @@ const MobileCarousel = () => {
   const containerRef = useRef(null);
   const autoPlayRef = useRef(null);
   const touchStartTimeRef = useRef(0);
+  const [banners, setBanners] = useState([]);
 
-    const banners = [
-      { id: 1, image: "/mobilecarousel1.avif" },
-      { id: 2, image: "/ad1.avif" },
-      { id: 3, image: "/mobilecarousel2.avif" },
-    ];
+ useEffect(() => {
+   const fetchBanners = async () => {
+     const response = await getBannerList("0", "mobile");
 
+     if (response?.status === 200 && response.data) {
+       setBanners(response.data);
+     } else {
+       console.error("Invalid banner response", response);
+       setBanners([
+         {
+           id: 1,
+           file: "/Banner4.gif",
+           image: "/Banner4.gif",
+         },
+       ]);
+     }
+   };
+
+   fetchBanners();
+ }, []);
+
+  // Rest of your component remains the same...
   const totalSlides = banners.length;
 
   // Improved auto-play with cleanup
@@ -36,9 +55,9 @@ const MobileCarousel = () => {
   }, []);
 
   useEffect(() => {
-    if (isAutoPlaying) startAutoPlay();
+    if (isAutoPlaying && totalSlides > 0) startAutoPlay();
     return stopAutoPlay;
-  }, [isAutoPlaying, startAutoPlay, stopAutoPlay]);
+  }, [isAutoPlaying, startAutoPlay, stopAutoPlay, totalSlides]);
 
   // Touch/Mouse event handlers with velocity detection
   const handleStart = (clientX) => {
@@ -137,17 +156,10 @@ const MobileCarousel = () => {
             <div
               key={banner.id}
               className="relative flex-shrink-0 w-full h-full"
-              onClick={(e) => {
-                if (isDragging || Math.abs(dragOffset) > 10) {
-                  e.preventDefault();
-                  return;
-                }
-                // Handle banner click
-              }}
             >
               <div className="relative w-full h-full overflow-hidden">
                 <Image
-                  src={banner.image}
+                  src={banner.file || banner.image}
                   alt={`Banner ${index + 1}`}
                   fill
                   className="w-full h-full object-cover select-none"
@@ -159,7 +171,6 @@ const MobileCarousel = () => {
           ))}
         </div>
       </div>
-
       {/* Navigation Dots */}
       <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
         {banners.map((_, index) => (

@@ -1,12 +1,57 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { fetchFromApi } from "@/lib/api";
 
-const MobileMenu = ({ isOpen, onClose, categories }) => {
+// Custom hook to fetch categories
+const useCategories = () => {
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  React.useEffect(() => {
+    const getCategories = async () => {
+      try {
+        const response = await fetchFromApi("/api/get_category_list");
+
+        // Group categories by parent to create the same structure as your JSON
+        const groupedCategories = response.data.reduce((acc, category) => {
+          const parentName = category.parent_name || "Other";
+          if (!acc[parentName]) {
+            acc[parentName] = {
+              name: parentName,
+              slug: category.parent_name
+                ? parentName.toLowerCase().replace(/\s+/g, "-")
+                : "other",
+              subcategories: [],
+            };
+          }
+          acc[parentName].subcategories.push({
+            name: category.name,
+            slug: category.slug,
+          });
+          return acc;
+        }, {});
+
+        setCategories(Object.values(groupedCategories));
+        setLoading(false);
+      } catch (error) {
+        console.error("Failed to load categories:", error);
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+
+    getCategories();
+  }, []);
+
+  return { categories, loading, error };
+};
+
+const MobileMenu = ({ isOpen, onClose }) => {
+  const { categories, loading, error } = useCategories();
   const [currentCategory, setCurrentCategory] = useState(null);
   const [currentSubcategory, setCurrentSubcategory] = useState(null);
   const [breadcrumb, setBreadcrumb] = useState([]);
@@ -85,6 +130,50 @@ const MobileMenu = ({ isOpen, onClose, categories }) => {
 
   const showBack = currentCategory !== null || currentSubcategory !== null;
 
+  if (loading) {
+    return (
+      <>
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-40" />
+        <div className="fixed top-0 left-0 w-[90%] h-full bg-white z-50">
+          <div className="flex items-center justify-end p-4 border-b border-gray-200">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleClose}
+              className="text-gray-600 hover:text-gray-800"
+            >
+              <X className="w-6 h-6" />
+            </Button>
+          </div>
+          <div className="p-4">Loading categories...</div>
+        </div>
+      </>
+    );
+  }
+
+  if (error) {
+    return (
+      <>
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-40" />
+        <div className="fixed top-0 left-0 w-[90%] h-full bg-white z-50">
+          <div className="flex items-center justify-end p-4 border-b border-gray-200">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleClose}
+              className="text-gray-600 hover:text-gray-800"
+            >
+              <X className="w-6 h-6" />
+            </Button>
+          </div>
+          <div className="p-4 text-red-500">
+            Error loading categories: {error}
+          </div>
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
       {/* Overlay */}
@@ -130,13 +219,13 @@ const MobileMenu = ({ isOpen, onClose, categories }) => {
             const isViewAll = item.name.toLowerCase().includes("all");
 
             return (
-              <div key={item.id || item.slug || index}>
+              <div key={item.slug || index}>
                 <button
                   onClick={() =>
                     currentSubcategory
                       ? handleSubcategoryClick(item)
                       : currentCategory
-                      ? handleCategoryClick(item)
+                      ? handleSubcategoryClick(item)
                       : handleCategoryClick(item)
                   }
                   className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors duration-200"

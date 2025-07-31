@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="max-w-[100vw] overflow-x-hidden">
           <Header />
-          <div className="container mx-auto">
+          <div className="container mx-auto px-2">
             <main>{children}</main>
           </div>
           <Footer />

@@ -1,17 +1,60 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Menu, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import categoriesData from "@/data/categories.json";
+import { fetchFromApi } from "@/lib/api";
 
 const ShopByCategories = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // Set initial category to the first category's slug
-  const [selectedCategory, setSelectedCategory] = useState(
-    categoriesData.categories[0].slug
-  );
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    const getCategories = async () => {
+      try {
+        const response = await fetchFromApi("/api/get_category_list");
+
+        // Group categories by parent to create the same structure as your JSON
+        const groupedCategories = response.data.reduce((acc, category) => {
+          const parentName = category.parent_name || "Other";
+          if (!acc[parentName]) {
+            acc[parentName] = {
+              name: parentName,
+              slug: category.parent_name
+                ? category.parent_name.toLowerCase().replace(/\s+/g, "-")
+                : "other",
+              subcategories: [],
+            };
+          }
+          acc[parentName].subcategories.push({
+            name: category.name,
+            slug: category.slug,
+          });
+          return acc;
+        }, {});
+
+        const mainCategories = Object.values(groupedCategories);
+        setCategories(mainCategories);
+
+        // Set initial selected category to the first category's slug
+        if (mainCategories.length > 0) {
+          setSelectedCategory(mainCategories[0].slug);
+        }
+
+        setLoading(false);
+      } catch (error) {
+        console.error("Failed to load categories:", error);
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+
+    getCategories();
+  }, []);
 
   const openDropdown = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -32,6 +75,31 @@ const ShopByCategories = () => {
     console.log("Selected subcategory:", subcategory);
     setIsOpen(false);
   };
+
+  if (loading) {
+    return (
+      <div className="relative">
+        <button className="flex items-center border-e-2 gap-2 px-4 py-2 text-sm font-semibold hover:bg-gray-200 text-gray-800">
+          <Menu size={18} />
+          <span>Shop By Categories</span>
+        </button>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="relative">
+        <button className="flex items-center border-e-2 gap-2 px-4 py-2 text-sm font-semibold hover:bg-gray-200 text-gray-800">
+          <Menu size={18} />
+          <span>Shop By Categories</span>
+        </button>
+        <div className="text-red-500 text-sm mt-1">
+          Error loading categories
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -58,7 +126,7 @@ const ShopByCategories = () => {
             <div className="flex min-h-[400px] divide-x divide-gray-200">
               {/* Left Column - Main Categories */}
               <div className="w-1/2 p-2 overflow-y-auto">
-                {categoriesData.categories.map((category) => (
+                {categories.map((category) => (
                   <div
                     key={category.slug}
                     onMouseOver={() => handleCategoryHover(category.slug)}
@@ -80,18 +148,17 @@ const ShopByCategories = () => {
                   <>
                     <div className="px-4 py-2 text-sm font-semibold text-gray-500 border-b mb-2">
                       {
-                        categoriesData.categories.find(
-                          (c) => c.slug === selectedCategory
-                        )?.name
+                        categories.find((c) => c.slug === selectedCategory)
+                          ?.name
                       }
                     </div>
-                    {categoriesData.categories
+                    {categories
                       ?.find((c) => c.slug === selectedCategory)
                       ?.subcategories?.map((subcategory) => (
                         <Link
                           key={subcategory.slug}
                           href={`/products/${subcategory.slug}`}
-                          className="block px-4 py-2 text-sm text-gray-800 rounded-md hover:bg-orange-50 hover:text-blue-600"
+                          className="block px-4 py-2 text-sm text-gray-800 rounded-md hover:bg-orange-50 hover:text-blue-600 capitalize"
                           onClick={() => handleSubcategoryClick(subcategory)}
                         >
                           {subcategory.name}
