@@ -536,7 +536,7 @@ function ProductPage() {
                                       className="bg-blue-600 hover:bg-blue-700 text-xs px-2 py-1 h-7 whitespace-nowrap"
                                     >
                                       <ExternalLink className="w-3 h-3 mr-1" />
-                                      Go to Store
+                                      Buy now
                                     </Button>
                                     <div className="flex items-center gap-1 text-xs text-gray-500">
                                       <Clock className="w-3 h-3 flex-shrink-0" />
