@@ -31,7 +31,7 @@ const ProductGrid = ({
   const nextRef = useRef(null);
 
   return (
-    <section className="py-4 bg-white">
+    <section className="py-4 bg-black">
       <div className="container mx-auto">
         {showTitle && (
           <motion.div
@@ -40,7 +40,7 @@ const ProductGrid = ({
             viewport={{ once: true }}
             className="flex items-center justify-between mb-8"
           >
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-800">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-100">
               {title}
             </h2>
 

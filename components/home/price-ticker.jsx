@@ -80,7 +80,7 @@ export function PriceTicker() {
   ])
 
   return (
-    <div className="bg-gray-950 border-y border-gray-800 py-1 overflow-hidden relative">
+    <div className="bg-gray-950 border-y border-gray-800 py-4 overflow-hidden relative ">
       <div className="flex animate-scroll whitespace-nowrap" style={{ animation: "scroll 20s linear infinite" }}>
         {/* First set of items */}
         {tickerData.map((item, index) => (

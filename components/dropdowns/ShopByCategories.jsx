@@ -79,9 +79,9 @@ const ShopByCategories = () => {
   if (loading) {
     return (
       <div className="relative">
-        <button className="flex items-center border-e-2 gap-2 px-4 py-2 text-sm font-semibold hover:bg-gray-200 text-gray-800">
+        <button className="flex items-center border-e-2 gap-2 px-4 py-2 text-sm font-semibold hover:bg-gray-500 text-gray-100">
           <Menu size={18} />
-          <span>Shop By Categories</span>
+          <span>Find By Categories</span>
         </button>
       </div>
     );
@@ -90,9 +90,9 @@ const ShopByCategories = () => {
   if (error) {
     return (
       <div className="relative">
-        <button className="flex items-center border-e-2 gap-2 px-4 py-2 text-sm font-semibold hover:bg-gray-200 text-gray-800">
+        <button className="flex items-center border-e-2 gap-2 px-4 py-2 text-sm font-semibold hover:bg-gray-500 text-gray-200">
           <Menu size={18} />
-          <span>Shop By Categories</span>
+          <span>Find By Categories</span>
         </button>
         <div className="text-red-500 text-sm mt-1">
           Error loading categories
@@ -108,9 +108,9 @@ const ShopByCategories = () => {
       onMouseLeave={closeDropdown}
     >
       {/* Trigger Button */}
-      <button className="flex items-center border-e-2 gap-2 px-4 py-2 text-sm font-semibold hover:bg-gray-200 text-gray-800">
+      <button className="flex items-center border-e-2 gap-2 px-4 py-2 text-sm font-semibold text-gray-200">
         <Menu size={18} />
-        <span>Shop By Categories</span>
+        <span>Find By Categories</span>
       </button>
 
       {/* Dropdown */}
@@ -121,7 +121,7 @@ const ShopByCategories = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.2 }}
-            className="absolute z-50 mt-2 bg-white border rounded-md shadow-lg w-[640px]"
+            className="absolute z-50 mt-2 bg-black border rounded-md shadow-lg w-[640px]"
           >
             <div className="flex min-h-[400px] divide-x divide-gray-200">
               {/* Left Column - Main Categories */}
@@ -132,12 +132,12 @@ const ShopByCategories = () => {
                     onMouseOver={() => handleCategoryHover(category.slug)}
                     className={`flex items-center justify-between px-4 py-2 text-sm rounded-md cursor-pointer ${
                       selectedCategory === category.slug
-                        ? "bg-orange-50 text-blue-600 font-semibold"
-                        : "text-gray-800 hover:bg-gray-100"
+                        ? "bg-gray-900 text-blue-600 font-semibold"
+                        : "text-gray-200 hover:bg-gray-900"
                     }`}
                   >
                     <span>{category.name}</span>
-                    <ChevronRight size={14} className="text-gray-400" />
+                    <ChevronRight size={14} className="text-white " />
                   </div>
                 ))}
               </div>
@@ -146,7 +146,7 @@ const ShopByCategories = () => {
               <div className="w-1/2 p-2 overflow-y-auto">
                 {selectedCategory && (
                   <>
-                    <div className="px-4 py-2 text-sm font-semibold text-gray-500 border-b mb-2">
+                    <div className="px-4 py-2 text-sm font-semibold text-gray-200 border-b mb-2">
                       {
                         categories.find((c) => c.slug === selectedCategory)
                           ?.name
@@ -158,7 +158,7 @@ const ShopByCategories = () => {
                         <Link
                           key={subcategory.slug}
                           href={`/products/${subcategory.slug}`}
-                          className="block px-4 py-2 text-sm text-gray-800 rounded-md hover:bg-orange-50 hover:text-blue-600 capitalize"
+                          className="block px-4 py-2 text-sm text-gray-200 rounded-md hover:bg-gray-900 hover:text-blue-600 capitalize"
                           onClick={() => handleSubcategoryClick(subcategory)}
                         >
                           {subcategory.name}

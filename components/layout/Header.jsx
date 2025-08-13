@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import MobileMenu from "@/components/layout/MobileMenu";
 import NavigationDropdowns from "../dropdowns/Categories";
 import categoriesData from "@/data/categories.json";
+import { PriceTicker } from "../home/price-ticker";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0070bf]">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black">
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -54,7 +55,7 @@ const Header = () => {
               <Input
                 type="text"
                 placeholder="What are you looking for?"
-                className="w-full py-2 pl-4 pr-10 rounded-md text-gray-800"
+                className="w-full py-2 pl-4 pr-10 rounded-md text-gray-200 bg-black"
               />
               <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5" />
             </div>
@@ -96,6 +97,7 @@ const Header = () => {
           </div>
         </div>
         <NavigationDropdowns />
+        <PriceTicker />
       </header>
 
       {/* Mobile Menu */}

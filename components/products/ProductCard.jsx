@@ -23,11 +23,11 @@ const ProductCard = ({ product }) => {
   );
 
   return (
-    <div className="relative w-full bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 p-2 flex flex-col gap-3 rounded-lg">
+    <div className="relative w-full bg-black border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 p-2 flex flex-col gap-3 rounded-lg">
       {/* Top Icons */}
       <div className="absolute top-2 left-2 z-10">
         <div
-          className={`flex items-center border border-gray-300 rounded overflow-hidden text-xs font-semibold px-2 py-0.5 bg-white ${discountColor}`}
+          className={`flex items-center border border-gray-300 rounded overflow-hidden text-xs font-semibold px-2 py-0.5 bg-black ${discountColor}`}
         >
           <span>{product.discount}%</span>
           <span className="ml-1">{discountIcon}</span>
@@ -56,7 +56,7 @@ const ProductCard = ({ product }) => {
       {/* Product Title */}
       <Link
         href={`/product/${product.slug}`}
-        className="text-center text-sm font-medium text-gray-900 line-clamp-1 "
+        className="text-center text-sm font-medium text-gray-200 line-clamp-1 "
       >
         {product.name}
       </Link>
@@ -66,7 +66,7 @@ const ProductCard = ({ product }) => {
         href={product.bestPriceLink || "#"}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center gap-1 text-sm font-semibold text-green-600 hover:underline"
+        className="flex items-center justify-center gap-1 text-sm font-semibold text-blue-400 hover:underline"
       >
         Price
         <ExternalLink className="w-4 h-4" />: {formatPrice(product.price)}
@@ -77,7 +77,7 @@ const ProductCard = ({ product }) => {
         {product.offers.slice(0, 2).map((offer, idx) => (
           <div
             key={idx}
-            className="flex items-center justify-between border-b last:border-b-0 hover:bg-gray-50 px-1 rounded transition"
+            className="flex items-center justify-between border-b last:border-b-0 hover:bg-gray-800 px-1 rounded transition"
           >
             <div className="flex items-center gap-2">
               <Image
@@ -86,10 +86,10 @@ const ProductCard = ({ product }) => {
                 width={18}
                 height={18}
               />
-              <span className="text-gray-700 text-xs">{offer.source}</span>
+              <span className="text-gray-200 text-xs">{offer.source}</span>
             </div>
             <div className="flex flex-col items-end">
-              <span className="text-gray-900 text-sm font-medium">
+              <span className="text-gray-200 text-sm font-medium">
                 {formatPrice(offer.price)}
               </span>
               {offer.delivery && (
