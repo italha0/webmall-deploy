@@ -66,7 +66,7 @@ const ProductCard = ({ product }) => {
         href={product.bestPriceLink || "#"}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center gap-1 text-sm font-semibold text-blue-400 hover:underline"
+        className="flex items-center justify-center gap-1 text-sm font-semibold text-green-500 hover:underline"
       >
         Price
         <ExternalLink className="w-4 h-4" />: {formatPrice(product.price)}

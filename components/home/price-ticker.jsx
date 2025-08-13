@@ -80,7 +80,7 @@ export function PriceTicker() {
   ])
 
   return (
-    <div className="bg-gray-950 border-y border-gray-800 py-4 overflow-hidden relative ">
+    <div className="bg-gray-950 border-y border-gray-800 py-4 overflow-hidden relative">
       <div className="flex animate-scroll whitespace-nowrap" style={{ animation: "scroll 20s linear infinite" }}>
         {/* First set of items */}
         {tickerData.map((item, index) => (
@@ -89,9 +89,9 @@ export function PriceTicker() {
             <span className="text-white font-semibold mr-2">${item.currentPrice}</span>
             <div className="flex items-center">
               {item.priceChange >= 0 ? (
-                <TrendingUp className="h-3 w-3 text-red-500 mr-1" />
+                <TrendingDown className="h-3 w-3 text-red-500 mr-1" />
               ) : (
-                <TrendingDown className="h-3 w-3 text-green-500 mr-1" />
+                <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
               )}
               <span className={`font-mono ${item.priceChange >= 0 ? "text-red-500" : "text-green-500"}`}>
                 {item.priceChange >= 0 ? "+" : ""}${item.priceChange}
