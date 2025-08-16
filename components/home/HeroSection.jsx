@@ -4,10 +4,13 @@ import Image from "next/image";
 import { ChevronRight, Zap, Clock, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import FeaturedCard from "./FeaturedCard"
+import products from "@/data/products.json"
+
 
 function HeroSection() {
   return (
-    <section className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] mt-14 flex items-center justify-center overflow-hidden bg-[#121212] text-white">
+    <section className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] mt-14 flex items-start justify-center overflow-hidden bg-[#121212] text-white">
       <div className="relative z-20 container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div className="text-left">
@@ -66,50 +69,11 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* Right Content */}
-        <div className="hidden lg:block">
-          <div className="relative">
-            <div className="max-w-sm min-h-[500px] ms-40 bg-[#1E1E1E] rounded-2xl p-6 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-2 mb-4">
-                <Badge className="bg-yellow-400 text-black font-bold">
-                  <TrendingUp className="h-3 w-3 mr-1" />
-                  TRENDING
-                </Badge>
-                <Badge className="bg-blue-600 text-white">Save $100</Badge>
-              </div>
-
-              <Image
-                src="/earpod2.avif"
-                alt="Featured Product"
-                width={400}
-                height={300}
-                className="w-full h-[300px] object-cover rounded-lg mb-4"
-              />
-
-              <h3 className="text-xl font-bold mb-2 text-white">
-                Wireless Earbuds
-              </h3>
-              <div className="flex items-center justify-between mb-4">
-                <div>
-                  <span className="text-3xl font-bold text-yellow-400">
-                    $999
-                  </span>
-                  <span className="text-lg text-gray-500 line-through ml-2">
-                    $1299
-                  </span>
-                </div>
-                <Badge variant="secondary" className="bg-gray-700 text-white">
-                  BestBuy
-                </Badge>
-              </div>
-
-              <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 transition-all duration-200">
-                View Deal
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
+        {products
+          .filter((p) => p.featured)
+          .map((p) => (
+            <FeaturedCard key={p.id} products={products} cycleInterval={4000} />
+          ))}
       </div>
     </section>
   );

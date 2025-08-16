@@ -76,7 +76,7 @@ function ProductPage() {
   if (!product)
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-xl font-bold text-gray-700">Product Not Found</h1>
+        <h1 className="text-xl font-bold text-gray-200">Product Not Found</h1>
       </div>
     );
 
@@ -87,10 +87,10 @@ function ProductPage() {
   const imageUrl = product.images?.[selectedImage] || product.image;
 
   return (
-    <div className="pt-7 min-h-screen bg-gray-50">
-      <div className="bg-white border-b">
+    <div className="pt-7 min-h-screen bg-black">
+      <div className="bg-black border-b">
         <div className="container mx-auto  py-2">
-          <div className="flex items-center space-x-2 text-sm text-gray-700">
+          <div className="flex items-center space-x-2 text-sm text-gray-200">
             <span className="text-blue-600 hover:underline cursor-pointer">
               Home
             </span>
@@ -168,7 +168,7 @@ function ProductPage() {
             )}
 
             {/* Ratings & Views */}
-            <div className="bg-white p-3 rounded-md border border-gray-100">
+            <div className="bg-black p-3 rounded-md border border-gray-100">
               <div className="flex items-center gap-2 text-sm">
                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 <span>{product.rating}</span>
@@ -202,11 +202,11 @@ function ProductPage() {
           <div className="lg:col-span-2 space-y-4">
             {/* Product Title & Basic Info */}
             <div>
-              <h1 className="text-2xl font-bold text-gray-700 mb-1">
+              <h1 className="text-2xl font-bold text-gray-200 mb-1">
                 {product.name}
               </h1>
-              <div className="flex flex-wrap items-center gap-2 text-sm text-gray-700 mb-3">
-                <span className="bg-gray-100 px-2 py-1 rounded">
+              <div className="flex flex-wrap items-center gap-2 text-sm text-gray-200 mb-3">
+                <span className="bg-black px-2 py-1 rounded">
                   {product.category}
                 </span>
                 <span className="flex items-center gap-1">
@@ -223,7 +223,7 @@ function ProductPage() {
             </div>
 
             {/* Price Comparison Card */}
-            <div className="bg-white p-4 rounded-md border border-gray-200">
+            <div className="bg-black p-4 rounded-md border border-gray-200">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-full bg-green-600 flex items-center justify-center">
@@ -238,7 +238,7 @@ function ProductPage() {
                 </span>
               </div>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-2xl font-bold text-gray-700">
+                <span className="text-2xl font-bold text-gray-200">
                   {formatPrice(bestOffer?.price || product.price)}
                 </span>
                 <span className="text-xs text-gray-500">
@@ -263,7 +263,7 @@ function ProductPage() {
             {/* Variants */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {product.colors && product.colors.length > 0 && (
-                <div className="bg-white p-3 rounded-md border border-gray-200">
+                <div className="bg-black p-3 rounded-md border border-gray-200">
                   <h4 className="text-xs font-medium text-gray-500 mb-2">
                     OTHER PRODUCTS
                   </h4>
@@ -292,7 +292,7 @@ function ProductPage() {
                 </div>
               )}
 
-              <div className="bg-white p-3 rounded-md border border-gray-200">
+              <div className="bg-black p-3 rounded-md border border-gray-200">
                 <h4 className="text-xs font-medium text-gray-500 mb-2">
                   STORAGE
                 </h4>
@@ -308,7 +308,7 @@ function ProductPage() {
             </div>
 
             {/* Price Insights */}
-            <div className="bg-white p-3 rounded-md border border-gray-200">
+            <div className="bg-black p-3 rounded-md border border-gray-200">
               <h4 className="font-medium text-sm mb-3 flex items-center gap-2">
                 <BarChart3 className="w-4 h-4" />
                 Price Insights
@@ -381,13 +381,13 @@ function ProductPage() {
 
             {/* Key Features */}
             {product.features && product.features.length > 0 && (
-              <div className="bg-white p-3 rounded-md border border-gray-100">
+              <div className="bg-black p-3 rounded-md border border-gray-100">
                 <h4 className="font-medium text-sm mb-2">Key Features</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm">
                   {product.features.slice(0, 4).map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-gray-200">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -398,7 +398,7 @@ function ProductPage() {
         <div className="p-2 sm:p-4">
           <div className="space-y-4 sm:space-y-6">
             {/* Tabs Section */}
-            <div className="bg-white rounded-lg shadow-sm border mb-8">
+            <div className="bg-black rounded-lg shadow-sm border mb-8">
               <div className="border-b">
                 <div className="flex overflow-x-auto">
                   {[
@@ -420,7 +420,7 @@ function ProductPage() {
                       className={`px-6 py-3 font-medium whitespace-nowrap flex items-center gap-2 ${
                         activeTab === tab.id
                           ? "border-b-2 border-blue-500 text-blue-600"
-                          : "text-gray-700 hover:text-gray-700"
+                          : "text-gray-200 hover:text-gray-200"
                       }`}
                       onClick={() => setActiveTab(tab.id)}
                     >
@@ -439,7 +439,7 @@ function ProductPage() {
                         Compare prices from {product.offers?.length || 0} stores
                       </h3>
                       <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
-                        <span className="text-sm text-gray-700 whitespace-nowrap">
+                        <span className="text-sm text-gray-200 whitespace-nowrap">
                           Sort by:
                         </span>
                         <select
@@ -464,12 +464,12 @@ function ProductPage() {
                           <Card
                             className={`${
                               index === 0 ? "ring-2 ring-green-500" : ""
-                            } hover:shadow-md transition-shadow`}
+                            } hover:shadow-md transition-shadow bg-black`}
                           >
                             <CardContent className="p-3 sm:p-4">
-                              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                              <div className="flex flex-col  sm:flex-row items-start sm:items-center justify-between gap-3">
                                 <div className="flex items-start sm:items-center gap-3 w-full">
-                                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                  <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center flex-shrink-0">
                                     {offer.logo ? (
                                       <Image
                                         src={offer.logo}
@@ -479,14 +479,14 @@ function ProductPage() {
                                         className="object-contain"
                                       />
                                     ) : (
-                                      <Store className="w-5 h-5 text-gray-700" />
+                                      <Store className="w-5 h-5 text-gray-200" />
                                     )}
                                   </div>
                                   <div className="min-w-0 flex-1">
                                     <h4 className="font-semibold text-base leading-tight line-clamp-1">
                                       {offer.source}
                                     </h4>
-                                    <p className="text-sm text-gray-700 leading-tight line-clamp-1 sm:line-clamp-2">
+                                    <p className="text-sm text-gray-200 leading-tight line-clamp-1 sm:line-clamp-2">
                                       {offer.description}
                                     </p>
                                     <div className="flex flex-wrap items-center gap-2 mt-1">
@@ -515,7 +515,7 @@ function ProductPage() {
                                           Best Price
                                         </Badge>
                                       )}
-                                      <div className="text-xl font-bold text-gray-700 whitespace-nowrap">
+                                      <div className="text-xl font-bold text-gray-200 whitespace-nowrap">
                                         {formatPrice(offer.price)}
                                       </div>
                                     </div>
@@ -625,10 +625,10 @@ function ProductPage() {
                           key={idx}
                           className="flex justify-between py-3 border-b border-gray-100"
                         >
-                          <span className="text-gray-700 font-medium">
+                          <span className="text-gray-200 font-medium">
                             {spec.name}
                           </span>
-                          <span className="text-gray-700 text-right max-w-[60%]">
+                          <span className="text-gray-200 text-right max-w-[60%]">
                             {spec.value}
                           </span>
                         </div>
@@ -664,7 +664,7 @@ function ProductPage() {
                       <CardContent>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                           <div className="border rounded-lg p-4">
-                            <div className="text-sm text-gray-700 mb-1">
+                            <div className="text-sm text-gray-200 mb-1">
                               Current Price
                             </div>
                             <div className="text-xl font-bold">
@@ -676,7 +676,7 @@ function ProductPage() {
                           </div>
 
                           <div className="border rounded-lg p-4">
-                            <div className="text-sm text-gray-700 mb-1">
+                            <div className="text-sm text-gray-200 mb-1">
                               Average Price
                             </div>
                             <div className="text-xl font-bold">
@@ -693,7 +693,7 @@ function ProductPage() {
                           </div>
 
                           <div className="border rounded-lg p-4">
-                            <div className="text-sm text-gray-700 mb-1">
+                            <div className="text-sm text-gray-200 mb-1">
                               Price Drop
                             </div>
                             {product.priceHistory &&

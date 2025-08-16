@@ -8,6 +8,8 @@ import products from "@/data/products.json";
 import ProductGrid from "@/components/products/ProductGrid";
 import { LoadingScreen } from "@/components/ui/loading-screen";
 import { Tektur } from "next/font/google";
+import CategoriesSwiper from "@/components/home/CategoryGrid";
+
 export default function Home() {
   const featuredProducts = products.filter((product) => product.featured);
   const newArrivals = products.slice(0, 6);
@@ -19,6 +21,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <CategoriesSwiper/>
       <ProductGrid title="Most Popular" products={products} swiperMode={true} />
 
       <ProductGrid title="Featured" products={products} swiperMode={true} />

@@ -11,6 +11,7 @@ import categoriesData from "@/data/categories.json";
 import { PriceTicker } from "../home/price-ticker";
 
 const Header = () => {
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -57,7 +58,7 @@ const Header = () => {
                 placeholder="What are you looking for?"
                 className="w-full py-2 pl-4 pr-10 rounded-md text-gray-200 bg-black"
               />
-              <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5" />
+              <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-200  w-5 h-5" />
             </div>
           </div>
 

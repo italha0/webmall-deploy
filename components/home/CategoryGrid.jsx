@@ -13,37 +13,26 @@ import "swiper/css/pagination";
 
 const CategoriesSwiper = () => {
   const categories = [
-    { id: 2, slug: "Umbrella", image: "/category2.png" },
     { id: 3, slug: "Mobile Accessories", image: "/category3.avif" },
     { id: 4, slug: "Microphones", image: "/category4.png" },
-    { id: 5, slug: "Home Improvement", image: "/category7.png" },
     { id: 6, slug: "Earphones", image: "/category5.png" },
-    { id: 7, slug: "Speakers", image: "/category6.png" },
-    { id: 8, slug: "Fans", image: "/category7.png" },
     { id: 9, slug: "Smart Watch", image: "/category3.avif" },
     { id: 10, slug: "Camera", image: "/category2.png" },
-    { id: 12, slug: "Umbrella", image: "/category4.png" },
     { id: 13, slug: "Mobile Accessories", image: "/category3.avif" },
     { id: 14, slug: "Microphones", image: "/category4.png" },
-    { id: 15, slug: "Home Improvement", image: "/category7.png" },
     { id: 16, slug: "Earphones", image: "/category5.png" },
-    { id: 17, slug: "Speakers", image: "/category6.png" },
     { id: 18, slug: "Fans", image: "/category7.png" },
     { id: 19, slug: "Smart Watch", image: "/category3.avif" },
     { id: 20, slug: "Camera", image: "/category2.png" },
-    { id: 22, slug: "Umbrella", image: "/category4.png" },
     { id: 23, slug: "Mobile Accessories", image: "/category3.avif" },
     { id: 24, slug: "Microphones", image: "/category4.png" },
-    { id: 25, slug: "Home Improvement", image: "/category7.png" },
     { id: 26, slug: "Earphones", image: "/category5.png" },
-    { id: 27, slug: "Speakers", image: "/category6.png" },
-    { id: 28, slug: "Fans", image: "/category7.png" },
     { id: 29, slug: "Smart Watch", image: "/category3.avif" },
     { id: 30, slug: "Camera", image: "/category2.png" },
   ];
 
   return (
-    <div className="container mx-auto bg-white py-3 overflow-x-auto  scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-200">
+    <div className="container mx-auto bg-black py-3 overflow-x-auto  scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-200">
       <div className="relative">
         <Swiper
           modules={[Autoplay]}
