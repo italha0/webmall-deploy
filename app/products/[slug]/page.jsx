@@ -1,42 +1,98 @@
-import React from "react";
-import ProductListPage from "@/components/products/ProductListPage";
+"use client";
+import React, { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import ProductCard from "@/components/products/ProductCard";
+import products from "@/data/products.json";
+import ProductToolbar from "@/components/products/ProductSearch";
 
-// Fetch categories from API instead of local JSON for generateStaticParams
-export async function generateStaticParams() {
-  try {
-    // Replace with your actual API call
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/get_category_list`
-    );
-    const categories = await response.json();
+const ProductList = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [category, setCategory] = useState("All Categories");
+  const [brand, setBrand] = useState("All Brands");
+  const [sortOrder, setSortOrder] = useState("Price: Low to High");
 
-    const params = [];
+  const filteredAndSortedProducts = useMemo(() => {
+    let result = products;
 
-    // Handle both categories and subcategories
-    categories.forEach((category) => {
-      params.push({ slug: category.slug });
+    // 1. Filtering Logic
+    if (searchQuery) {
+      const lowerCaseQuery = searchQuery.toLowerCase();
+      // Corrected Code
+      result = result.filter((product) => {
+        const nameMatch = (product.name?.toLowerCase() || "").includes(
+          lowerCaseQuery
+        );
+        const brandMatch = (product.brand?.toLowerCase() || "").includes(
+          lowerCaseQuery
+        );
+        const categoryMatch = (product.category?.toLowerCase() || "").includes(
+          lowerCaseQuery
+        );
+        return nameMatch || brandMatch || categoryMatch;
+      });
+    }
+    if (category !== "All Categories") {
+      result = result.filter((product) => product.category === category);
+    }
+    if (brand !== "All Brands") {
+      result = result.filter((product) => product.brand === brand);
+    }
 
-      if (category.subcategories) {
-        category.subcategories.forEach((subcategory) => {
-          params.push({ slug: subcategory.slug });
-        });
-      }
-    });
+    // 2. Sorting Logic
+    const sortedResult = [...result];
+    if (sortOrder === "Price: Low to High") {
+      sortedResult.sort((a, b) => a.price - b.price);
+    } else if (sortOrder === "Price: High to Low") {
+      sortedResult.sort((a, b) => b.price - a.price);
+    } else if (sortOrder === "Alphabetical (A-Z)") {
+      sortedResult.sort((a, b) => a.name.localeCompare(b.name));
+    }
 
-    return params;
-  } catch (error) {
-    console.error("Error generating static params:", error);
-    return [];
-  }
-}
+    return sortedResult;
+  }, [searchQuery, category, brand, sortOrder]);
 
-// Set revalidation time (optional)
-export const revalidate = 3600; // Revalidate every hour
+  const categories = [
+    "All Categories",
+    ...new Set(products.map((p) => p.category)),
+  ];
+  const brands = ["All Brands", ...new Set(products.map((p) => p.brand))];
 
-const Page = ({ params }) => {
-  const { slug } = params;
+  return (
+    <div className="min-h-screen bg-black">
+      <div className="mx-auto">
+        <ProductToolbar
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          selectedCategory={category}
+          setSelectedCategory={setCategory}
+          categories={categories}
+          selectedBrand={brand}
+          setSelectedBrand={setBrand}
+          brands={brands}
+          sortOrder={sortOrder}
+          setSortOrder={setSortOrder}
+          resultCount={filteredAndSortedProducts.length}
+        />
 
-  return <ProductListPage key={slug} slug={slug} />;
+        <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex-1">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3"
+            >
+              <AnimatePresence>
+                {filteredAndSortedProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default Page;
+export default ProductList;

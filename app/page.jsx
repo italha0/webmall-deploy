@@ -13,10 +13,6 @@ import AnimatedCounter from "@/components/home/AnimatedCounter";
 import { Card , CardContent } from "@/components/ui/card";
 import { Shield , Badge } from "lucide-react";
 import { TrustBadges } from "@/components/home/TrustBadges";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
 
 
 export default function Home() {
@@ -66,7 +62,7 @@ export default function Home() {
       <HeroSection />
       <TrustBadges/>
       <CategoriesSwiper />
-      <ProductGrid title="Featured" products={products} swiperMode={true} />
+      <ProductGrid title="Featured Products" products={products} swiperMode={true} />
       {/* Credit Card Offers - Enhanced */}
       <section className="py-4 sm:py-6 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-2 sm:px-4">
