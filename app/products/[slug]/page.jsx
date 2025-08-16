@@ -36,7 +36,7 @@ export const revalidate = 3600; // Revalidate every hour
 const Page = ({ params }) => {
   const { slug } = params;
 
-  return <ProductListPage slug={slug} />;
+  return <ProductListPage key={slug} slug={slug} />;
 };
 
 export default Page;
