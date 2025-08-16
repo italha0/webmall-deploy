@@ -13,6 +13,11 @@ import AnimatedCounter from "@/components/home/AnimatedCounter";
 import { Card , CardContent } from "@/components/ui/card";
 import { Shield , Badge } from "lucide-react";
 import { TrustBadges } from "@/components/home/TrustBadges";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+
 
 export default function Home() {
   const featuredProducts = products.filter((product) => product.featured);

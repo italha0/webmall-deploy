@@ -10,7 +10,7 @@ import products from "@/data/products.json"
 
 function HeroSection() {
   return (
-    <section className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] mt-14 flex items-start justify-center overflow-hidden bg-[#121212] text-white">
+    <section className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] mt-[5rem] flex items-start justify-center overflow-hidden bg-[#121212] text-white">
       <div className="relative z-20 container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div className="text-left">
@@ -68,9 +68,7 @@ function HeroSection() {
             </div>
           </div>
         </div>
-
-       
-            <FeaturedCard key={products.id} products={products} cycleInterval={4000} />
+        <FeaturedCard key={products.id} products={products} cycleInterval={4000} />
       </div>
     </section>
   );

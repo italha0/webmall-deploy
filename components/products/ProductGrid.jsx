@@ -66,28 +66,24 @@ const ProductGrid = ({
               modules={[Navigation, Autoplay]}
               spaceBetween={10}
               slidesPerView={1.6}
-              navigation={{
-                prevEl: prevRef.current,
-                nextEl: nextRef.current,
-              }}
               autoplay={{
                 delay: 4000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
               }}
               breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                },
-                768: {
-                  slidesPerView: 3,
-                },
-                1024: {
-                  slidesPerView: 4,
-                },
-                1280: {
-                  slidesPerView: 5.5,
-                },
+                640: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 },
+                1280: { slidesPerView: 5.5 },
+              }}
+              onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+              }}
+              navigation={{
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
               }}
               className="pb-4 gap-6"
             >
