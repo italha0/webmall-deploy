@@ -4,7 +4,8 @@ import Image from "next/image";
 import { ChevronRight, TrendingUp } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import AnimatedCounter from "./AnimatedCounter"
+import AnimatedCounter from "./AnimatedCounter";
+
 export default function FeaturedCard({ products, cycleInterval = 5000 }) {
   const featuredProducts = products.filter((product) => product.featured);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,7 +53,7 @@ export default function FeaturedCard({ products, cycleInterval = 5000 }) {
 
       <div className="hidden lg:block">
         <div className="relative">
-          <div className="max-w-sm min-h-[500px] ms-40 mt-4 bg-[#1E1E1E] rounded-2xl p-6 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 relative">
+          <div className="max-w-[21rem] min-h-[400px] ms-48 mt-4 bg-[#1E1E1E] rounded-2xl p-6 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 relative">
             {/* Floating Overlay Badge */}
             <div
               className="absolute -top-3 -right-3 bg-yellow-400 text-black font-bold px-3 py-1 rounded-full flex items-center shadow-lg"
@@ -84,7 +85,7 @@ export default function FeaturedCard({ products, cycleInterval = 5000 }) {
                 alt={product.name}
                 width={400}
                 height={300}
-                className="w-full h-[250px] object-contain rounded-lg mb-4"
+                className="w-full h-[200px] object-contain rounded-lg mb-4"
                 key={product.id} // Add key to help React differentiate images
               />
 

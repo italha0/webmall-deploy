@@ -9,7 +9,7 @@ const CustomSelect = ({ value, onChange, options }) => (
     <select
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="appearance-none w-full bg-[#1c2532] border border-gray-600 text-gray-300 py-2.5 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-gray-700 focus:border-gray-500"
+      className="appearance-none w-full bg-[#1c2532] border border-gray-600 text-white py-2.5 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-gray-700 focus:border-gray-500"
     >
       {options.map((option) => (
         <option key={option} value={option}>
@@ -54,7 +54,7 @@ const ProductToolbar = ({
     <div>
       <div className="flex flex-col md:flex-row items-center gap-4 mt-16">
         {/* Search Bar */}
-        <div className="relative flex-grow w-full">
+        <div className="relative flex-grow w-[50%]">
           <Search
             className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"
             size={20}

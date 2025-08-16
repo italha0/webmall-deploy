@@ -46,7 +46,7 @@ function HeroSection() {
             </Button>
             <Button
               variant="outline"
-              className="border-2 border-yellow-400 text-black hover:bg-yellow-400 hover:text-black px-8 py-3 text-lg transition-all duration-200"
+              className="border-2 border-yellow-400 text-black bg-yellow-400 hover:text-black px-8 py-3 text-lg transition-all duration-200"
             >
               Browse Deals
             </Button>
@@ -69,11 +69,8 @@ function HeroSection() {
           </div>
         </div>
 
-        {products
-          .filter((p) => p.featured)
-          .map((p) => (
-            <FeaturedCard key={p.id} products={products} cycleInterval={4000} />
-          ))}
+       
+            <FeaturedCard key={products.id} products={products} cycleInterval={4000} />
       </div>
     </section>
   );

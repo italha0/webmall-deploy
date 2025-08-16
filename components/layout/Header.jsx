@@ -62,17 +62,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* App Store Buttons */}
-          <div className="hidden md:flex items-center gap-2">
-            <Image src="/ios.png" alt="App Store" width={120} height={40} />
-            <Image
-              src="/google.png"
-              alt="Google Play"
-              width={120}
-              height={40}
-            />
-          </div>
-
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
             <Button
