@@ -32,13 +32,13 @@ const ProductCard = ({ product }) => {
   );
 
   return (
-    <Card className="relative w-full bg-black border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 p-2 flex flex-col gap-3 rounded-lg">
+    <Card className="relative w-full bg-[#192130] border border-gray-500 shadow-sm hover:shadow-md transition-all duration-300 p-2 flex flex-col gap-3 rounded-lg">
       {/* Discount Badge */}
       <div className="absolute top-2 left-2 z-10">
         <div
           className={`flex items-center border border-gray-300 rounded overflow-hidden text-xs font-semibold px-2 py-0.5 bg-black ${discountColor}`}
         >
-          <span >{product.discount}%</span>
+          <span>{product.discount}%</span>
           <span className="ml-1">{discountIcon}</span>
         </div>
       </div>
@@ -95,19 +95,17 @@ const ProductCard = ({ product }) => {
             </span>
           </div>
         )}
+        {/* Views & Sold */}
+        <div className="flex items-center gap-2 text-xs text-gray-400">
+          <span>👁 987 views</span>
+          <span>🛒 34 sold</span>
+        </div>
         <div className="flex items-center gap-2 text-xs bg-gray-800 p-2 rounded">
           <span>💳</span>
           <span>
             <span className="font-medium text-green-500">3% Back</span> w/ Chase
           </span>
         </div>
-
-        {/* Offer description */}
-        {lowestOffer?.description && (
-          <div className="text-xs line-clamp-1 text-gray-400 bg-gray-800 px-2 py-1 rounded">
-            {lowestOffer.description}
-          </div>
-        )}
       </CardContent>
 
       <CardFooter className="mt-auto p-0">

@@ -54,7 +54,7 @@ const ProductToolbar = ({
     <div>
       <div className="flex flex-col md:flex-row items-center gap-4 mt-16">
         {/* Search Bar */}
-        <div className="relative flex-grow w-[50%]">
+        <div className="relative flex-grow w-[100%] md:w-[50%]">
           <Search
             className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"
             size={20}

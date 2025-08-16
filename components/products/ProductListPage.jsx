@@ -83,7 +83,6 @@ const ProductList = () => {
               className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3"
             >
               <AnimatePresence>
-                {/* FIX #2: Map over the filtered list, not the original 'products' array. */}
                 {filteredAndSortedProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
