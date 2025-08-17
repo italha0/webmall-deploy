@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { ChevronRight, Zap, Clock, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,10 +6,9 @@ import { Badge } from "@/components/ui/badge";
 import FeaturedCard from "./FeaturedCard"
 import products from "@/data/products.json"
 
-
 function HeroSection() {
   return (
-    <section className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] mt-[5rem] flex items-start justify-center overflow-hidden bg-[#121212] text-white">
+    <section className="relative h-[60vh] sm:h-[60vh] lg:h-[70vh] mt-[5rem] flex items-start justify-center overflow-hidden bg-[#121212] text-white">
       <div className="relative z-20 container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div className="text-left">
@@ -68,6 +66,7 @@ function HeroSection() {
             </div>
           </div>
         </div>
+        {/* right content */}
         <FeaturedCard key={products.id} products={products} cycleInterval={4000} />
       </div>
     </section>

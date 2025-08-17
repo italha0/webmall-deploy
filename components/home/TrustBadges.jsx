@@ -13,9 +13,9 @@ export function TrustBadges() {
   ];
 
   return (
-    <section className="py-2 bg-gray-950 border-y border-gray-800 mb-5">
+    <section className="py-2 bg-gray-950 border-y border-gray-800 my-5 md:my-0 md:mb-5 no-underline">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center gap-4 sm:gap-8 overflow-x-auto">
+        <div className="flex items-center justify-center gap-4 sm:gap-8">
           {badges.map((badge, index) => (
             <div key={index} className="flex items-center gap-2 min-w-fit">
               <badge.icon className={`h-4 w-4 ${badge.color}`} />

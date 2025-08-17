@@ -14,7 +14,6 @@ import { Card , CardContent } from "@/components/ui/card";
 import { Shield , Badge } from "lucide-react";
 import { TrustBadges } from "@/components/home/TrustBadges";
 
-
 export default function Home() {
   const featuredProducts = products.filter((product) => product.featured);
   const newArrivals = products.slice(0, 6);
