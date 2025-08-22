@@ -13,7 +13,7 @@ export function TrustBadges() {
   ];
 
   return (
-    <section className="py-2 bg-gray-950 border-y border-gray-800 my-5 md:my-0 md:mb-5 no-underline">
+    <section className="py-2 bg-gray-950 border-y border-gray-800 my-5 no-underline">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-4 sm:gap-8">
           {badges.map((badge, index) => (

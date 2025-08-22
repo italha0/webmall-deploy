@@ -758,7 +758,7 @@ function ProductPage() {
             </div>
           </div>
         </div>
-      </main>
+      </main> 
     </div>
   );
 }

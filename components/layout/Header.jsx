@@ -61,7 +61,6 @@ const Header = () => {
               <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-200  w-5 h-5" />
             </div>
           </div>
-
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
             <Button

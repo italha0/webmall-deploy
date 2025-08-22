@@ -5,10 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import FeaturedCard from "./FeaturedCard"
 import products from "@/data/products.json"
+import AnimatedCounter from "./AnimatedCounter";
 
 function HeroSection() {
   return (
-    <section className="relative h-[60vh] sm:h-[60vh] lg:h-[70vh] mt-[5rem] flex items-start justify-center overflow-hidden bg-[#121212] text-white">
+    <section className="relative  mt-[5rem] flex items-start justify-center overflow-hidden bg-[#121212] text-white">
       <div className="relative z-20 container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div className="text-left">
@@ -24,7 +25,10 @@ function HeroSection() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white">
-            Save Up To <span className="text-yellow-400">40%</span>
+            Save Up To{" "}
+            <span className="text-yellow-400">
+              <AnimatedCounter value={40} suffix="%" />
+            </span>
             <br />
             On Electronics
           </h1>
@@ -52,22 +56,38 @@ function HeroSection() {
 
           {/* Static Stats */}
           <div className="grid grid-cols-3 gap-4 text-center">
+            {/* Stat 1: Happy Users */}
             <div>
-              <div className="text-2xl font-bold text-yellow-400">50K+</div>
+              <div className="text-2xl font-bold text-yellow-400">
+                <AnimatedCounter value={50} suffix="K+" />
+              </div>
               <div className="text-xs text-gray-400">Happy Users</div>
             </div>
+
+            {/* Stat 2: Retailers */}
             <div>
-              <div className="text-2xl font-bold text-white">500+</div>
+              <div className="text-2xl font-bold text-white">
+                <AnimatedCounter value={500} suffix="+" />
+              </div>
               <div className="text-xs text-gray-400">Retailers</div>
             </div>
+
+            {/* Stat 3: Saved Total */}
             <div>
-              <div className="text-2xl font-bold text-yellow-400">$2.5M</div>
+              <div className="text-2xl font-bold text-yellow-400">
+                {/* Note: The component needs a small tweak for decimals. See below. */}
+                <AnimatedCounter value={2.5} prefix="$" suffix="M" />
+              </div>
               <div className="text-xs text-gray-400">Saved Total</div>
             </div>
           </div>
         </div>
         {/* right content */}
-        <FeaturedCard key={products.id} products={products} cycleInterval={4000} />
+        <FeaturedCard
+          key={products.id}
+          products={products}
+          cycleInterval={4000}
+        />
       </div>
     </section>
   );

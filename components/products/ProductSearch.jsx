@@ -11,8 +11,8 @@ const CustomSelect = ({ value, onChange, options }) => (
       onChange={(e) => onChange(e.target.value)}
       className="appearance-none w-full bg-[#1c2532] border border-gray-600 text-white py-2.5 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-gray-700 focus:border-gray-500"
     >
-      {options.map((option) => (
-        <option key={option} value={option}>
+      {options.map((option, index) => (
+        <option key={`${option}-${index}`} value={option}>
           {option}
         </option>
       ))}

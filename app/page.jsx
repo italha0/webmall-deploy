@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, progressPercentage } from "framer-motion";
 import HeroSection from "@/components/home/HeroSection";

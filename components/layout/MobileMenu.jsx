@@ -16,7 +16,7 @@ const useCategories = () => {
       try {
         const response = await fetchFromApi("/api/get_category_list");
 
-        // Group categories by parent to create the same structure as your JSON
+        //MGroup categories by parent to create the same structure as your JSON
         const groupedCategories = response.data.reduce((acc, category) => {
           const parentName = category.parent_name || "Other";
           if (!acc[parentName]) {
