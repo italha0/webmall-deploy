@@ -183,15 +183,27 @@ function ProductPage() {
             </div>
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-2">
-              <Button variant="outline" size="sm" className="text-xs gap-1">
+              <Button
+                variant="outline"
+                size="sm"
+                className="text-xs gap-1 bg-black text-white"
+              >
                 <Share2 className="w-3 h-3" />
                 Share
               </Button>
-              <Button variant="outline" size="sm" className="text-xs gap-1">
+              <Button
+                variant="outline"
+                size="sm"
+                className="text-xs gap-1 bg-black text-white"
+              >
                 <BarChart3 className="w-3 h-3" />
                 History
               </Button>
-              <Button variant="outline" size="sm" className="text-xs gap-1">
+              <Button
+                variant="outline"
+                size="sm"
+                className="bg-black text-white text-xs gap-1"
+              >
                 <Bell className="w-3 h-3" />
                 Alert
               </Button>
@@ -439,13 +451,13 @@ function ProductPage() {
                         Compare prices from {product.offers?.length || 0} stores
                       </h3>
                       <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
-                        <span className="text-sm text-gray-200 whitespace-nowrap">
+                        <span className="text-sm text-gray-200  whitespace-nowrap">
                           Sort by:
                         </span>
                         <select
                           value={sortBy}
                           onChange={(e) => setSortBy(e.target.value)}
-                          className="px-3 py-1 border rounded-md text-sm w-full sm:w-auto"
+                          className="px-3 py-1 border rounded-md bg-black text-sm w-full sm:w-auto"
                         >
                           <option value="price">Price (Low to High)</option>
                           <option value="source">Store Name</option>
@@ -758,7 +770,7 @@ function ProductPage() {
             </div>
           </div>
         </div>
-      </main> 
+      </main>
     </div>
   );
 }
