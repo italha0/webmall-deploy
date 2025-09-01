@@ -50,7 +50,7 @@ const useCategories = () => {
   return { categories, loading, error };
 };
 
-const MobileMenu = ({ isOpen, onClose }) => {
+  const MobileMenu = ({ isOpen, onClose }) => {
   const { categories, loading, error } = useCategories();
   const [currentCategory, setCurrentCategory] = useState(null);
   const [currentSubcategory, setCurrentSubcategory] = useState(null);
