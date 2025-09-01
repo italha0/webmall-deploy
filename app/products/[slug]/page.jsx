@@ -1,15 +1,19 @@
 "use client";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo , useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProductCard from "@/components/products/ProductCard";
 import products from "@/data/products.json";
 import ProductToolbar from "@/components/products/ProductSearch";
+import { fetchFromApi } from "@/lib/api";
 
 const ProductList = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [category, setCategory] = useState("All Categories");
   const [brand, setBrand] = useState("All Brands");
   const [sortOrder, setSortOrder] = useState("Price: Low to High");
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
+
 
   const filteredAndSortedProducts = useMemo(() => {
     let result = products;
@@ -56,7 +60,20 @@ const ProductList = () => {
     ...new Set(products.map((p) => p.category)),
   ];
   const brands = ["All Brands", ...new Set(products.map((p) => p.brand))];
+useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const response = await fetchFromApi("/api/get_products_list");
+        setProducts(response.data);
+      } catch (error) {
+        console.error("Failed to load products:", error);
+        setError(error.message);
+      }
+    };
 
+    getProducts();
+}, []);
+  
   return (
     <div className="min-h-screen bg-black">
       <div className="mx-auto">
@@ -83,7 +100,7 @@ const ProductList = () => {
               className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3"
             >
               <AnimatePresence>
-                {filteredAndSortedProducts.map((product) => (
+                {products.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
               </AnimatePresence>

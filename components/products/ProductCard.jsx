@@ -26,10 +26,10 @@ const ProductCard = ({ product }) => {
     <TrendingUp className="w-3.5 h-3.5" />
   );
 
-  // ✅ Find the lowest price offer
-  const lowestOffer = product.offers?.reduce((prev, curr) =>
-    prev.price < curr.price ? prev : curr
-  );
+  const lowestOffer = product.variations?.[0]?.platforms?.[0];
+  const imagePath = product.image?.startsWith("http")
+    ? product.image
+    : `https://webmall.webwork.co.in/${product.image}`;
 
   return (
     <Card className="relative w-full bg-[#192130] border border-gray-500 shadow-sm hover:shadow-md transition-all duration-300 p-2 flex flex-col gap-3 rounded-lg">
@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => {
         <div
           className={`flex items-center border border-gray-300 rounded overflow-hidden text-xs font-semibold px-2 py-0.5 bg-black ${discountColor}`}
         >
-          <span>{product.discount}%</span>
+          <span>{lowestOffer?.discount || 0}%</span>
           <span className="ml-1">{discountIcon}</span>
         </div>
       </div>
@@ -50,7 +50,7 @@ const ProductCard = ({ product }) => {
           className="relative w-full h-[140px] flex items-center justify-center group overflow-hidden"
         >
           <Image
-            src={product.image || "/placeholder.svg"}
+            src={`https://webmall.webwork.co.in/${product.main_image}`}
             alt={product.name}
             width={180}
             height={180}
@@ -63,12 +63,12 @@ const ProductCard = ({ product }) => {
         {/* Category & Rating */}
         <div className="flex items-center gap-2 text-xs">
           <span className="px-2 py-0.5 rounded-full bg-gray-800 text-gray-300">
-            {product.category}
+            {product.categories?.[0]?.name || "Uncategorized"}
           </span>
           <div className="flex items-center gap-1">
             <span className="text-yellow-400">★</span>
-            <span className="font-medium">{product.rating}</span>
-            <span className="text-gray-400">({product.reviews})</span>
+            <span className="font-medium">4.5 </span>
+            <span className="text-gray-400">(8)</span>
           </div>
         </div>
 
@@ -79,10 +79,10 @@ const ProductCard = ({ product }) => {
         {lowestOffer && (
           <div className="flex items-center gap-2">
             <span className="text-green-500 font-bold text-lg">
-              {formatPrice(lowestOffer.price)}
+              {formatPrice(lowestOffer.selling_price)}
             </span>
             <span className="ml-auto flex items-center gap-1  text-xs px-2 py-0.5 rounded">
-              {lowestOffer.logo ? (
+              {lowestOffer.logo && (
                 <Image
                   src={lowestOffer.logo}
                   alt={lowestOffer.source}
@@ -90,7 +90,7 @@ const ProductCard = ({ product }) => {
                   height={16}
                   className="object-contain"
                 />
-              ) : null}
+              )}
               {lowestOffer.source}
             </span>
           </div>
@@ -114,7 +114,7 @@ const ProductCard = ({ product }) => {
           href={`/product/${product.slug}`}
           className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold py-2 rounded-md transition"
         >
-          View All {product.offers?.length || 0} Prices
+          View All {product.variations?.[0]?.platforms?.length || 0} Prices
         </Link>
       </CardFooter>
     </Card>

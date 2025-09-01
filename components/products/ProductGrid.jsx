@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -9,15 +8,34 @@ import ProductCard from "./ProductCard";
 import { Button } from "@/components/ui/button";
 import "swiper/css";
 import "swiper/css/navigation";
-
+import { fetchFromApi } from "@/lib/api";
 
 const ProductGrid = ({
-  products,
   title = "Featured Products",
   showTitle = true,
   showViewAll = true,
   swiperMode = true,
 }) => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const response = await fetchFromApi("/api/get_products_list");
+        setProducts(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Failed to load products:", error);
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+
+    getProducts();
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -29,6 +47,13 @@ const ProductGrid = ({
   };
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <section className="py-4 bg-black">
@@ -132,7 +157,7 @@ const ProductGrid = ({
               No Products Found
             </h3>
             <p className="text-gray-500">
-              We couldn&apos;t find any products matching your criteria.
+              We couldn't find any products matching your criteria.
             </p>
           </motion.div>
         )}
