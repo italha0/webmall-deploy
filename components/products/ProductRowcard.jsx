@@ -9,9 +9,9 @@ const ProductRowCard = ({ product }) => {
       {/* Left - Image & Info */}
       <div className="flex gap-4 items-center flex-1">
         <Image
-          src={product.image}
-                  alt={product.name}
-                  fill
+         src={product.image}
+         alt={product.name}
+         fill
           className="w-20 h-20 object-contain rounded"
         />
         <div>
