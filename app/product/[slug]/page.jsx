@@ -147,7 +147,7 @@ function ProductPage() {
   const getImageUrl = (path) => {
     if (!path) return "/placeholder.png"; // A fallback image
     // Replace with your actual base URL if needed
-    const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "";
+    const BASE_URL ="https://webmall.webwork.co.in/";
     return `${BASE_URL}/${path}`;
   };
 
