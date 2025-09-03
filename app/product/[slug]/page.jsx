@@ -156,7 +156,7 @@ function ProductPage() {
   const imageUrl = allImages[selectedImage] || getImageUrl(product.main_image);
 
   return (
-    <div className="pt-7 min-h-screen bg-black text-gray-200">
+    <div className="mt-14 min-h-screen bg-black text-gray-200">
       <div className="bg-black border-b border-gray-700">
         <div className="container mx-auto py-2">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
@@ -234,7 +234,7 @@ function ProductPage() {
             )}
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-2">
+            {/* <div className="flex flex-wrap gap-2">
               <Button
                 variant="outline"
                 size="sm"
@@ -256,7 +256,7 @@ function ProductPage() {
               >
                 <Heart className="w-3.5 h-3.5" /> Save
               </Button>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Column - Product Info & Pricing */}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "../ui/card";
 import { Badge, Shield } from "lucide-react";
 import Image from "next/image";
-
+import AnimatedCounter from "./AnimatedCounter";
 import { fetchFromApi } from "@/lib/api";
 
 const CreditCard = () => {
@@ -59,6 +59,20 @@ const CreditCard = () => {
     },
   ];
   return (
+     <section className="py-4 sm:py-6 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="text-center mb-3 sm:mb-4">
+            <h2 className="text-lg sm:text-xl font-bold mb-1">
+              💳 Exclusive Credit Card Offers
+            </h2>
+            <p className="text-gray-400 text-sm">
+              Maximize savings with exclusive bank offers - Save up to{" "}
+              <span className="text-green-400 font-bold">
+                <AnimatedCounter value={15} suffix="%" />
+              </span>{" "}
+              more
+            </p>
+          </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
       {offers.map((offer, index) => (
         <Card
@@ -90,7 +104,9 @@ const CreditCard = () => {
           </CardContent>
         </Card>
       ))}
-    </div>
+        </div>
+      </div>
+      </section>
   );
 };
 
