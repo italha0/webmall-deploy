@@ -145,8 +145,8 @@ function ProductPage() {
       sortBy === "price"
         ? a.price - b.price
         : sortBy === "source"
-        ? a.source.localeCompare(b.source)
-        : 0
+          ? a.source.localeCompare(b.source)
+          : 0
     );
   }, [activeVariation, sortBy]);
 
@@ -217,7 +217,6 @@ function ProductPage() {
           </div>
         </div>
       </div>
-
       <main className="container mx-auto py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
           {/* Left Column - Product Media */}
@@ -260,11 +259,10 @@ function ProductPage() {
                   <button
                     key={idx}
                     onClick={() => setSelectedImage(idx)}
-                    className={`shrink-0 w-16 h-16 rounded-md border-2 transition-colors bg-gray-900 ${
-                      idx === selectedImage
-                        ? "border-blue-500"
-                        : "border-gray-700 hover:border-gray-500"
-                    }`}
+                    className={`shrink-0 w-16 h-16 rounded-md border-2 transition-colors bg-gray-900 ${idx === selectedImage
+                      ? "border-blue-500"
+                      : "border-gray-700 hover:border-gray-500"
+                      }`}
                   >
                     <Image
                       src={img}
@@ -309,11 +307,10 @@ function ProductPage() {
                         <button
                           key={option}
                           onClick={() => handleOptionSelect(type, option)}
-                          className={`px-4 py-2 text-sm rounded-md transition-colors border ${
-                            selectedOptions[type] === option
-                              ? "bg-blue-600 text-white border-blue-600"
-                              : "bg-gray-800 border-gray-600 hover:bg-gray-700"
-                          }`}
+                          className={`px-4 py-2 text-sm rounded-md transition-colors border ${selectedOptions[type] === option
+                            ? "bg-blue-600 text-white border-blue-600"
+                            : "bg-gray-800 border-gray-600 hover:bg-gray-700"
+                            }`}
                         >
                           {option}
                         </button>
@@ -393,7 +390,7 @@ function ProductPage() {
                   <div>
                     <div className="text-gray-400">Price Range</div>
                     <div className="font-semibold text-lg text-white">
-                      {formatPrice(sortedOffers[sortedOffers.length - 1].price)}{" "}
+                      {formatPrice(sortedOffers[sortedOffers.length - 1].price)}
                       - {formatPrice(sortedOffers[0].price)}
                     </div>
                   </div>
@@ -401,7 +398,7 @@ function ProductPage() {
                 {bestOffer && bestOffer.price < averagePrice ? (
                   <div className="mt-4 p-2.5 bg-green-900/50 rounded text-sm text-green-300 flex items-center gap-2">
                     <CheckCircle className="w-4 h-4" />
-                    Good deal: This price is{" "}
+                    Good deal: This price is
                     {Math.round(
                       ((averagePrice - bestOffer.price) / averagePrice) * 100
                     )}
@@ -427,11 +424,10 @@ function ProductPage() {
               ].map((tab) => (
                 <button
                   key={tab.id}
-                  className={`px-6 py-4 font-medium whitespace-nowrap flex items-center gap-2 text-sm transition-colors ${
-                    activeTab === tab.id
-                      ? "border-b-2 border-blue-500 text-blue-500"
-                      : "text-gray-400 hover:text-white border-b-2 border-transparent"
-                  }`}
+                  className={`px-6 py-4 font-medium whitespace-nowrap flex items-center gap-2 text-sm transition-colors ${activeTab === tab.id
+                    ? "border-b-2 border-blue-500 text-blue-500"
+                    : "text-gray-400 hover:text-white border-b-2 border-transparent"
+                    }`}
                   onClick={() => setActiveTab(tab.id)}
                 >
                   <tab.icon className="w-4 h-4" />
@@ -440,8 +436,192 @@ function ProductPage() {
               ))}
             </div>
           </div>
+
           <div className="p-6">
-            {/* ... Rest of the JSX remains the same */}
+
+            {activeTab === "prices" && (
+              <div>
+
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
+
+                  <h3 className="text-xl font-semibold">
+                    Compare prices from
+                    {sortedOffers.length} stores
+                  </h3>
+
+                  <div className="flex items-center gap-2 w-full sm:w-auto">
+
+                    <span className="text-sm text-gray-400 whitespace-nowrap">
+                      Sort by:
+                    </span>
+
+                    <select
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value)}
+                      className="px-3 py-1.5 border border-gray-600 rounded-md bg-gray-800 text-sm w-full sm:w-auto focus:ring-blue-500 focus:border-blue-500"
+                    >
+
+                      <option value="price">Price (Low to High)</option>
+                      <option value="source">Store Name</option>
+
+                    </select>
+
+                  </div>
+
+                </div>
+
+                <div className="space-y-4">
+
+                  {displayedOffers?.map((offer, index) => (
+                    <motion.div
+                      key={`${offer.source}-${index}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+
+                      <Card
+                        className={`hover:shadow-lg transition-shadow bg-gray-900 border-gray-700 ${index === 0 ? "ring-2 ring-green-500" : ""
+                          }`}
+                      >
+
+                        <CardContent className="p-4">
+
+                          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+
+                            <div className="flex items-center gap-4 flex-1 min-w-0">
+
+                              <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">
+
+                                <Store className="w-6 h-6 text-gray-400" />
+
+                              </div>
+
+                              <div className="min-w-0">
+
+                                <h4 className="font-semibold text-lg text-white truncate">
+
+                                  {offer.source}
+                                </h4>
+
+                                <div className="flex items-center gap-1.5 mt-1">
+
+                                  <Truck className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />
+
+                                  <span className="text-xs text-gray-400">
+
+                                    {offer.delivery}
+
+                                  </span>
+
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                            <div className="w-full md:w-auto flex flex-row md:flex-col items-center md:items-end justify-between gap-2 pl-0 md:pl-4">
+
+                              <div className="text-right">
+
+                                <div className="text-xl font-bold text-white whitespace-nowrap">
+
+                                  {formatPrice(offer.price)}
+
+                                </div>
+
+                                {offer.discount && (
+                                  <div className="text-sm text-red-500 whitespace-nowrap">
+
+                                    {offer.discount}% OFF
+
+                                  </div>
+                                )}
+
+                              </div>
+
+                              <Button
+                                size="sm"
+                                onClick={() => window.open(offer.url, "_blank")}
+                                className="bg-blue-600 hover:bg-blue-700 text-xs px-3 py-1.5 h-8 whitespace-nowrap"
+                              >
+
+                                <ExternalLink className="w-3.5 h-3.5 mr-1.5" />
+                                Buy now
+
+                              </Button>
+
+                            </div>
+
+                          </div>
+
+                        </CardContent>
+
+                      </Card>
+
+                    </motion.div>
+                  ))}
+
+                  {sortedOffers.length > 3 && (
+                    <Button
+                      variant="outline"
+                      className="w-full mt-6 bg-gray-800 border-gray-600 hover:bg-gray-700"
+                      onClick={() => setShowAllOffers(!showAllOffers)}
+                    >
+
+                      {showAllOffers ? (
+                        <>
+
+                          <ChevronUp className="w-4 h-4 mr-2" />
+                          Show Less
+                        </>
+                      ) : (
+                        <>
+
+                          <ChevronDown className="w-4 h-4 mr-2" />
+                          Show All {sortedOffers.length} Offers
+
+                        </>
+                      )}
+
+                    </Button>
+                  )}
+
+                </div>
+
+              </div>
+            )}
+
+            {activeTab === "description" && (
+              <div className="prose prose-invert max-w-none text-gray-300">
+
+                <h3 className="text-xl font-semibold mb-4 text-white">
+                  Product Description
+                </h3>
+
+                <p>
+
+                  {expandedDescription
+                    ? product.description
+                    : `${product.description.substring(0, 300)}${product.description.length > 300 ? "..." : ""
+                    }`}
+
+                </p>
+
+                {product.description.length > 300 && (
+                  <Button
+                    variant="link"
+                    className="px-0 text-blue-500 hover:text-blue-400"
+                    onClick={() => setExpandedDescription(!expandedDescription)}
+                  >
+
+                    {expandedDescription ? "Show Less" : "Read More"}
+
+                  </Button>
+                )}
+
+              </div>
+            )}
           </div>
         </div>
       </main>
