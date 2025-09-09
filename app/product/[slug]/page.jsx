@@ -341,7 +341,7 @@ function ProductPage() {
                       {formatPrice(bestOffer.price)}
                     </span>
                     {bestOffer.discount && (
-                      <span className="text-md text-red-500">
+                      <span className="text-md text-green-500">
                         {bestOffer.discount}% OFF
                       </span>
                     )}
