@@ -135,7 +135,7 @@ function HeroSection() {
             </div>
             <div>
               <div className="text-2xl font-bold text-yellow-400">
-                <AnimatedCounter value={2.5} prefix="$" suffix="M" />
+                <AnimatedCounter value={2.5} prefix="₹" suffix="M" />
               </div>
               <div className="text-xs text-gray-400">Saved Total</div>
             </div>

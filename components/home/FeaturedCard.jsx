@@ -98,7 +98,7 @@ export default function FeaturedCard({
                 </Badge>
                 <Badge className="bg-blue-600 text-white">
                   {/* The price calculation logic is simpler now */}
-                  Save ${product.originalPrice - product.price}
+                  Save ₹{product.originalPrice - product.price}
                 </Badge>
               </div>
 
@@ -124,10 +124,10 @@ export default function FeaturedCard({
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <span className="text-3xl font-bold text-yellow-400">
-                    <AnimatedCounter value={product.price} prefix="$" />
+                    <AnimatedCounter value={product.price} prefix="₹" />
                   </span>
                   <span className="text-lg text-gray-500 line-through ml-2">
-                    <AnimatedCounter value={product.originalPrice} prefix="$" />
+                    <AnimatedCounter value={product.originalPrice} prefix="₹" />
                   </span>
                 </div>
                 <Badge variant="secondary" className="bg-gray-700 text-white">
