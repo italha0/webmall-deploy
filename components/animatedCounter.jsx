@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 
 export function AnimatedCounter({ value, duration = 2000, prefix = "", suffix = "" }) {
   const [count, setCount] = useState(0)
-
   useEffect(() => {
     let startTime
     let animationFrame
