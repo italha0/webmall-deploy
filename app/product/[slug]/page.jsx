@@ -123,7 +123,7 @@ function ProductPage() {
   const formatPrice = (price) =>
     new Intl.NumberFormat("en-AE", {
       style: "currency",
-      currency: "INR",
+      currency: "AED",
       minimumFractionDigits: 0,
     }).format(price);
 

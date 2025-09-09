@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
   const formatPrice = (price) =>
     new Intl.NumberFormat("en-IN", {
       style: "currency",
-      currency: "INR",
+      currency: "AED",
     }).format(price);
 
   const isDiscountNegative = product.discount < 0;
